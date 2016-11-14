@@ -1,0 +1,30 @@
+@charset "utf-8";
+@font-face {
+  font-family: "Square721 BT Roman";
+  src: url("https://db.onlinewebfonts.com/t/7b6a3052ac99368df5c80f3fd161fe32.eot");
+  src: url("https://db.onlinewebfonts.com/t/7b6a3052ac99368df5c80f3fd161fe32.eot?#iefix") format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/7b6a3052ac99368df5c80f3fd161fe32.woff2") format("woff2"),
+  url("https://db.onlinewebfonts.com/t/7b6a3052ac99368df5c80f3fd161fe32.woff") format("woff"),
+  url("https://db.onlinewebfonts.com/t/7b6a3052ac99368df5c80f3fd161fe32.ttf") format("truetype"),
+  url("https://db.onlinewebfonts.com/t/7b6a3052ac99368df5c80f3fd161fe32.svg#Square721 BT Roman") format("svg");
+}
+
+@font-face {font-family: "Square721 BT Bold";
+    src: url("https://db.onlinewebfonts.com/t/71b14c7b971cf8d9493bbc5883cb158f.eot");
+    src: url("https://db.onlinewebfonts.com/t/71b14c7b971cf8d9493bbc5883cb158f.eot?#iefix") format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/71b14c7b971cf8d9493bbc5883cb158f.woff2") format("woff2"),
+    url("https://db.onlinewebfonts.com/t/71b14c7b971cf8d9493bbc5883cb158f.woff") format("woff"),
+    url("https://db.onlinewebfonts.com/t/71b14c7b971cf8d9493bbc5883cb158f.ttf") format("truetype"),
+    url("https://db.onlinewebfonts.com/t/71b14c7b971cf8d9493bbc5883cb158f.svg#Square721 BT Bold") format("svg");
+}
+.square-bold {
+  margin-left: 10px;
+  font-family: 'Square721 BT Bold';
+  font-size: 36px;
+  color: rgba(0,0,0,.87);
+  transform: scaleX(1.1);
+}
+.square-bold:hover {
+  text-decoration: none;
+  color: rgba(0,0,0,.87);
+}
