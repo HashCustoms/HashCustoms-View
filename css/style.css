@@ -1,101 +1,147 @@
 @charset "utf-8";
-@font-face {
-  font-family: "Square721 BT Roman";
-  src: url("https://db.onlinewebfonts.com/t/7b6a3052ac99368df5c80f3fd161fe32.eot");
-  src: url("https://db.onlinewebfonts.com/t/7b6a3052ac99368df5c80f3fd161fe32.eot?#iefix") format("embedded-opentype"),
-  url("https://db.onlinewebfonts.com/t/7b6a3052ac99368df5c80f3fd161fe32.woff2") format("woff2"),
-  url("https://db.onlinewebfonts.com/t/7b6a3052ac99368df5c80f3fd161fe32.woff") format("woff"),
-  url("https://db.onlinewebfonts.com/t/7b6a3052ac99368df5c80f3fd161fe32.ttf") format("truetype"),
-  url("https://db.onlinewebfonts.com/t/7b6a3052ac99368df5c80f3fd161fe32.svg#Square721 BT Roman") format("svg");
-}
 
 @font-face {font-family: "Square721 BT Bold";
-    src: url("https://db.onlinewebfonts.com/t/71b14c7b971cf8d9493bbc5883cb158f.eot");
-    src: url("https://db.onlinewebfonts.com/t/71b14c7b971cf8d9493bbc5883cb158f.eot?#iefix") format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/71b14c7b971cf8d9493bbc5883cb158f.woff2") format("woff2"),
-    url("https://db.onlinewebfonts.com/t/71b14c7b971cf8d9493bbc5883cb158f.woff") format("woff"),
-    url("https://db.onlinewebfonts.com/t/71b14c7b971cf8d9493bbc5883cb158f.ttf") format("truetype"),
-    url("https://db.onlinewebfonts.com/t/71b14c7b971cf8d9493bbc5883cb158f.svg#Square721 BT Bold") format("svg");
+    src: url("//db.onlinewebfonts.com/t/71b14c7b971cf8d9493bbc5883cb158f.eot");
+    src: url("//db.onlinewebfonts.com/t/71b14c7b971cf8d9493bbc5883cb158f.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/71b14c7b971cf8d9493bbc5883cb158f.ttf") format("truetype");
 }
 
-.z-depth-1 {
-  position: relative;
-  z-index: 1;
+html,
+body {
+  font-family: 'Roboto';
+  font-weight: 400;
 }
+
+.light { font-weight: 300; }
+
+.semi-bold { font-weight: 500; }
 
 .no-padding { padding: 0; }
 
-.no-pad-left { padding-left: 0; }
+.text-black { color: #000; }
 
-.no-pad-right { padding-right: 0; }
+.text-white { color: #fff; }
 
-.border-bottom-white { border-bottom: 3px solid #fff; }
+.bg-grey {
+  padding-bottom: 20rem;
+  background-color: #474747;
+}
 
-.navbar-h { height: 43px; }
+.strip-shade {
+  height: 36px;
+  background: url(../images/hatch-bg.png);
+}
 
-.square-bold {
-  position: relative;
-  top: -4px;
-  display: inline-block;
-  margin-left: 16px;
+.strip-shade h1 {
+  margin-top: -1px;
+  margin-left: 16%;
   font-family: 'Square721 BT Bold';
-  font-size: 36px;
-  color: rgba(0,0,0,.87);
-  transform: scale(1.1,.8);
+  color: #767676;
+  transform: scale(1.1,.6);
 }
 
-.square-bold:focus,
-.square-bold:hover,
-.know-more:focus,
-.know-more:hover {
-  text-decoration: none;
-  color: rgba(0,0,0,.87);
+.transparent-bg {
+  background-color: rgba(255,255,255,.3);
+  box-shadow: 0 0 12px -8px #000;
 }
 
-#nav-tab-row { transition: background-color 400ms; }
+.logo-pos { margin-top: -20px; }
 
-#nav-tab-row:hover,
-.white-opacity-78 { background-color: rgba(255,255,255,.78); }
+.navbar-custom > li > a {
+  font-size: 20px;
+  color: #333;
+  text-shadow: none;
+  transition: background-color 200ms, border-bottom 200ms;
+}
 
-.full-w { width: 100%; }
+.navbar-custom > li.active > a,
+.navbar-custom > li > a:focus,
+.navbar-custom > li > a:hover {
+  color: #fff;
+  background-color: #8d0000;
+  border-bottom: 6px solid #e00000;
+}
 
-.nav-tab {
-  font-family: 'Square721 BT Roman';
-  font-size: 18px;
+.custom-underline {
+  line-height: 1.5;
+  color: #000;
+  background: url(../images/heading-underline.png) no-repeat 50% 100%;
+}
+
+.custom-underline.white {
+  color: #fff;
+  background: url(../images/heading-underline-white.png) no-repeat 50% 100%;
+}
+
+.content-text {
+  margin: 25px auto;
+  font-size: 20px;
   text-align: center;
-  text-transform: uppercase;
+}
+
+.p-bottom7rem { padding-bottom: 7rem; }
+
+.m-top10px { margin-top: 10px; }
+
+.f-size20px { font-size: 20px; }
+
+.f-size14px { font-size: 14px; }
+
+.vision-strip {
+  padding: 10px 15px;
+  margin: 10px auto 10px;
+  color: #fff;
+  background: linear-gradient(right, #8d0000, #e00000);
+  background: -webkit-linear-gradient(right, #8d0000, #e00000);
+  background: -o-linear-gradient(right, #8d0000, #e00000);
+  background: -moz-linear-gradient(right, #8d0000, #e00000);
+  border-radius: 2px;
+}
+
+.vision-strip p { margin: auto !important; }
+
+.img-absolute-center {
+  position: absolute;
+  top: 131px;
+  left: 41.5%;
+}
+
+.profile-pic {
+  padding: 10px;
+  margin: 15px auto;
   cursor: pointer;
-  transition: color 200ms;
+  border: 3px solid #0d47a1;
+  border-radius: 100%;
 }
 
-.nav-tab:hover,
-.nav-tab:focus,
-.dropdown-menu.custom > li > a:focus,
-.dropdown-menu.custom > li > a:hover {
-  color: #337ab7;
-  text-decoration: underline;
+.profile-overlay {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  bottom: 17px;
+  left: 17px;
+  padding: 35px 20px;
+  background-color: rgba(255,255,255,.7);
+  border-radius: 100%;
+  opacity: 0;
+  transition: opacity 300ms;
 }
 
-.nav-tab.dropdown:hover .dropdown-menu { display: block; }
+.profile-pic.rotate { transform: rotate(40deg); }
 
-.dropdown-menu.custom { border: none; }
+.profile-pic:hover + .profile-overlay,
+.profile-overlay:hover { opacity: 1; }
 
-.m-top13px { margin-top: 13px; }
+.profile-overlay a { display: block; }
 
-.m-top5px { margin-top: 5px; }
-
-.m-top-n118px { margin-top: -118px; }
-
-.radical-text {
-  font-family: 'Square721 BT Roman';
-  font-size: 21px;
-  color: rgba(0,0,0,.87);
+.profile-overlay i {
+  padding: 10px 12px;
+  margin: 15px auto 0;
+  border: 3px solid #0d47a1;
+  border-radius: 100%;
 }
 
-.radical-text .heading { font-size: 32px; }
-
-.know-more {
-  font-size: 16px;
-  color: rgba(0,0,0,.87);
-  text-decoration: underline !important;
-}
+.parallax {
+  height: 370px;
+  background: fixed url("../images/about-bottom.jpg") no-repeat center;
+  background-size: cover;
