@@ -22,13 +22,10 @@ body {
 
 .text-white { color: #fff; }
 
-.bg-grey {
-  padding-bottom: 20rem;
-  background-color: #474747;
-}
+.bg-grey { background-color: #474747; }
 
 .strip-shade {
-  height: 36px;
+  height: 32px;
   background: url(../images/hatch-bg.png);
 }
 
@@ -42,15 +39,21 @@ body {
 
 .transparent-bg {
   background-color: rgba(255,255,255,.3);
-  box-shadow: 0 0 12px -8px #000;
+  box-shadow: 0 0 12px -3px #000;
 }
 
-.logo-pos { margin-top: -20px; }
+.icon-bar { background-color: #000; }
+
+.logo-pos {
+  max-width: 75px;
+  margin-top: -20px;
+}
 
 .navbar-custom > li > a {
   font-size: 20px;
   color: #333;
   text-shadow: none;
+  /* xs size border-bottom: 6px solid transparent;*/
   transition: background-color 200ms, border-bottom 200ms;
 }
 
@@ -81,7 +84,11 @@ body {
 
 .p-bottom7rem { padding-bottom: 7rem; }
 
+.p-bottom20rem { padding-bottom: 20rem; }
+
 .m-top10px { margin-top: 10px; }
+
+.m-right10px { margin-right: 10px; }
 
 .f-size20px { font-size: 20px; }
 
@@ -103,7 +110,7 @@ body {
 .img-absolute-center {
   position: absolute;
   top: 131px;
-  left: 41.5%;
+  left: calc(50% - 9rem);
 }
 
 .profile-pic {
@@ -116,11 +123,14 @@ body {
 
 .profile-overlay {
   position: absolute;
-  top: 17px;
-  right: 17px;
-  bottom: 17px;
-  left: 17px;
-  padding: 35px 20px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 17px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   background-color: rgba(255,255,255,.7);
   border-radius: 100%;
   opacity: 0;
@@ -132,11 +142,15 @@ body {
 .profile-pic:hover + .profile-overlay,
 .profile-overlay:hover { opacity: 1; }
 
-.profile-overlay a { display: block; }
+.profile-overlay a {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  text-decoration: none;
+}
 
 .profile-overlay i {
   padding: 10px 12px;
-  margin: 15px auto 0;
   border: 3px solid #0d47a1;
   border-radius: 100%;
 }
@@ -145,3 +159,43 @@ body {
   height: 370px;
   background: fixed url("../images/about-bottom.jpg") no-repeat center;
   background-size: cover;
+}
+
+.social-icons {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 24px;
+  color: #fff;
+  transform: scale(1);
+  transition: transform 300ms, color 200ms;
+}
+
+.social-icons:first-child { margin-left: 10px; }
+
+.social-icons:focus,
+.social-icons:hover {
+  color: #999;
+  text-decoration: none;
+  transform: scale(1.2);
+}
+
+.subscribe {
+  padding: 6px 25px;
+  display: inline-block;
+  color: #333;
+  background-color: #b8b8b8;
+}
+
+.hr-line {
+  height: 7px;
+  background-color: #000;
+}
+
+@media only screen and (max-width: 600px) {
+  .strip-shade h1 {
+    margin-top: 4px;
+    margin-left: 21%;
+    font-size: 28px;
+    transform: scale(1,.6);
+  }
+}
