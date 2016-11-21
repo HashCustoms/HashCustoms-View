@@ -109,7 +109,7 @@ body {
 
 .img-absolute-center {
   position: absolute;
-  top: 131px;
+  top: -22rem;
   left: calc(50% - 9rem);
 }
 
