@@ -20,7 +20,11 @@ body {
 
 .text-black { color: #000; }
 
+.text-grey { color: #333 !important; }
+
 .text-white { color: #fff; }
+
+.bg-black { background-color: #000; }
 
 .bg-grey { background-color: #474747; }
 
@@ -65,6 +69,59 @@ body {
   border-bottom: 6px solid #e00000;
 }
 
+#top-carousel .carousel-inner img { margin-top: 28px; }
+
+.carousel-indicators.custom li {
+  z-index: 2;
+  width: 15px;
+  height: 15px;
+  margin: 1px 6px;
+  background-color: #333;
+  border: none;
+  opacity: .7;
+}
+
+.carousel-indicators.custom li:hover { opacity: .9; }
+
+.carousel-indicators.custom .active {
+  width: 16px;
+  height: 16px;
+  margin: 0 6px;
+  background-color: #fff;
+  border: 5px solid #333;
+  opacity: .6;
+  transition: all 200ms;
+}
+
+.carousel-control.custom {
+  top: 46%;
+  width: 65px;
+  height: 65px;
+  background: rgba(0,0,0,.8);
+  border-radius: 50%;
+  opacity: .7;
+}
+
+.carousel-control.custom.left { left: 30px; }
+
+.carousel-control.custom.right { right: 30px; }
+
+.btn.book-now {
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(0,0,0,.6);
+  transition: top 200ms, bottom 200ms, left 200ms background-color 200ms;
+}
+
+.btn.book-now:hover,
+.btn.book-now:focus { background-color: #ddd; }
+
+.btn.book-now a:hover,
+.btn.book-now a:focus {
+  color: #333;
+  text-decoration: none;
+}
+
 .custom-underline {
   line-height: 1.5;
   color: #000;
@@ -82,11 +139,92 @@ body {
   text-align: center;
 }
 
+.radicality-bg {
+  background: #fff url(../images/white-hatch-bg.png) no-repeat center;
+  background-size: cover;
+}
+
+.radicality-bg p {
+  margin: 15px auto;
+  font-size: 20px;
+}
+
+.radicality-bg .text-grey {
+  font-size: 16px;
+  text-decoration: none !important;
+  border-bottom: 1px solid #333;
+}
+
+.highlights-box .img-responsive { border-radius: 3px; }
+
+.highlights-box.left {
+  padding: 10px 0;
+  margin-right: 4px;
+}
+
+.highlights-box.left .white-triangle {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  border-left: 6.5rem solid #fff;
+  border-bottom: 11.5rem solid transparent;
+}
+
+.highlights-box.right .white-triangle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-right: 6.5rem solid #fff;
+  border-top: 11.5rem solid transparent;
+}
+
+.highlights-box .carousel-caption {
+  bottom: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.highlights-box.left .carousel-caption {
+  right: 12px;
+  left: 0;
+}
+
+.highlights-box.right .carousel-caption {
+  right: 0;
+  left: 12px;
+}
+
+.highlights-box.right .shade-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to top, rgba(0,0,0,.7) 10%, rgba(0,0,0,0) 70%);
+}
+
+.perseverance img {
+  margin: 2px;
+  border-radius: 3px;
+}
+
+.perseverance .pad-top-bot {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.perseverance .extra-left { margin-left: 6px; }
+
 .p-bottom7rem { padding-bottom: 7rem; }
 
 .p-bottom20rem { padding-bottom: 20rem; }
 
 .m-top10px { margin-top: 10px; }
+
+.m-top-bottom2rem {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
 
 .m-right10px { margin-right: 10px; }
 
@@ -155,8 +293,14 @@ body {
   border-radius: 100%;
 }
 
+.parallax-home {
+  height: 40rem;
+  background: fixed url("../images/parallax-home.jpg") no-repeat center;
+  background-size: cover;
+}
+
 .parallax {
-  height: 370px;
+  height: 40rem;
   background: fixed url("../images/about-bottom.jpg") no-repeat center;
   background-size: cover;
 }
@@ -192,9 +336,59 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+  .btn.book-now {
+    bottom: 11rem;
+    left: 14rem;
+  }
+
   .text-left-sm { text-align: left; }
 
   .text-right-sm { text-align: right; }
+}
+
+@media only screen and (min-width: 992px) {
+  .btn.book-now {
+    top: 22rem;
+    bottom: initial;
+    left: 25rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .carousel-indicators.custom { bottom: 0; }
+
+  .carousel-indicators.custom li {
+    width: 12px;
+    height: 12px;
+    margin: 0 3px;
+  }
+
+  .carousel-indicators.custom .active {
+    width: 13px;
+    height: 13px;
+    margin: 0 3px;
+    border: 4px solid #fff;
+  }
+
+  .carousel-control.custom {
+    width: 36px;
+    height: 36px;
+  }
+
+  .carousel-control.custom.left { left: 10px; }
+
+  .carousel-control.custom.right { right: 10px; }
+
+  .btn.book-now {
+    bottom: 5rem;
+    left: 7rem;
+  }
+
+  .radicality-bg h1 { font-size: 24px; }
+
+  .radicality-bg p { font-size: 17px; }
+
+  .radicality-bg p span { font-size: 14px; }
 }
 
 @media only screen and (max-width: 600px) {
@@ -203,5 +397,11 @@ body {
     margin-left: 21%;
     font-size: 28px;
     transform: scale(1,.6);
+  }
+
+  .btn.book-now {
+    bottom: 0;
+    left: 1rem;
+    font-size: 12px;
   }
 }
