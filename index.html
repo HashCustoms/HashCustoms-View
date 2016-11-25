@@ -15,7 +15,7 @@
   <nav class="navbar navbar-fixed-top">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-12 strip-shade">
+        <div class="col-xs-12 strip-shade top no-pad-xs">
           <h1 class="text-uppercase">Hash Customs</h1>
         </div>
       </div>
@@ -32,7 +32,7 @@
             </button>
             <div class="col-xs-12 col-sm-10 col-md-11">
               <ul class="nav navbar-nav navbar-right collapse navbar-collapse light navbar-custom" id="myNavbar">
-                <li>
+                <li class="active">
                   <a>Home</a>
                 </li>
                 <li>
@@ -41,7 +41,7 @@
                 <li>
                   <a href="#" ">Gallery</a>
                 </li>
-                <li class="active">
+                <li>
                   <a href="/about.html">About Us</a>
                 </li>
               </ul>
@@ -62,35 +62,140 @@
             <li data-target="#top-carousel" data-slide-to="1"></li>
             <li data-target="#top-carousel" data-slide-to="2"></li>
             <li data-target="#top-carousel" data-slide-to="3"></li>
+            <li data-target="#top-carousel" data-slide-to="4"></li>
           </ol>
           <div class="carousel-inner">
             <div class="item active">
-              <img class="img-responsive" src="images/headlight.jpg" alt="First slide">
+              <img class="img-responsive" src="images/home-carousel1.jpg" alt="First slide">
             </div>
             <div class="item">
-              <img class="img-responsive" src="images/indicators.jpg" alt="Second slide">
+              <img class="img-responsive" src="images/home-carousel2.jpg" alt="Second slide">
             </div>
             <div class="item">
-              <img class="img-responsive" src="images/back-leftview.jpg" alt="Third slide">
+              <img class="img-responsive" src="images/home-carousel3.jpg" alt="Third slide">
             </div>
             <div class="item">
-              <img class="img-responsive" src="images/bike-sideview.jpg" alt="Third slide">
+              <img class="img-responsive" src="images/home-carousel4.jpg" alt="Fourth slide">
+            </div>
+            <div class="item">
+              <img class="img-responsive" src="images/home-carousel5.jpg" alt="Fifth slide">
             </div>
           </div>
-          <a class="left carousel-control custom" data-slide="prev" href="#top-carousel">
-            <span class="icon-prev"></span>
+          <a class="left carousel-control" data-slide="prev" href="#top-carousel">
+            <span class="icon-prev less"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="right carousel-control custom" data-slide="next" href="#top-carousel">
-            <span class="icon-next"></span>
+          <a class="right carousel-control" data-slide="next" href="#top-carousel">
+            <span class="icon-next less"></span>
             <span class="sr-only">Next</span>
           </a>
         </div>
         <div class="btn book-now text-uppercase">
-          <a class="text-white" href="#">
+          <a class="text-white" href="#" data-toggle="modal" data-target="#bookPopup">
             <span class="light">Own a Prototype</span><br>
             <span class="semi-bold">Book Now</span>
           </a>
+        </div>
+        <div id="bookPopup" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="text-center text-uppercase modal-title">Book Now</h3>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <form name="bookingForm" method="post" action="form submit url here">
+                      <div class="row">
+                        <div class="col-xs-4 text-right">
+                          <h4 class="text-capitalize text-grey">Project</h4>
+                        </div>
+                        <div class="col-xs-8">
+                          <div class="form-group">
+                            <select class="form-control" id="project" name="project-name" data-validation="required" data-validation-error-msg-required="Project Name is required.">
+                              <option disabled selected>Choose a design concept</option>
+                              <option>Morse Code</option>
+                              <option disabled>Future Vision</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-4 text-right">
+                          <h4 class="text-capitalize text-grey">Prototype Number</h4>
+                          <span class="text-grey">(Can be your favourite or lucky number)</span>
+                        </div>
+                        <div class="col-xs-8">
+                          <div class="form-group">
+                            <select class="form-control" id="prototype" name="prototype-number" data-validation="required"
+                            data-validation-error-msg-required="Prototype Number is required.">
+                              <option disabled selected>Pick your favourite number</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                              <option>6</option>
+                              <option>7</option>
+                              <option>8</option>
+                              <option>9</option>
+                              <option>10</option>
+                              <option>11</option>
+                              <option>12</option>
+                              <option>13</option>
+                              <option>14</option>
+                              <option>15</option>
+                              <option>16</option>
+                              <option>17</option>
+                              <option>18</option>
+                              <option>19</option>
+                              <option>20</option>
+                              <option>21</option>
+                              <option>22</option>
+                              <option>23</option>
+                              <option>24</option>
+                              <option>25</option>
+                              <option>26</option>
+                              <option>27</option>
+                            </select>
+                            <span class="text-grey">The chosen number will be inscribed on your motorcycle</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-4 text-right">
+                          <h4 class="text-capitalize text-grey">Vehicle Number</h4>
+                        </div>
+                        <div class="col-xs-8">
+                          <input class="form-control" id="vehicle-num" name="vehicleNumber" data-validation="required" data-validation-error-msg-required="Vehicle Number is required." type="text" placeholder="e.g. MH01 AX 4040">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-4 text-right">
+                          <p class="text-capitalize text-light-grey">Note:</p>
+                        </div>
+                        <div class="col-xs-8">
+                          <span>Protytpe number can be changed as per the availability.</span><br>
+                          <span>A number once assigned to a client will never be repeated.</span><br>
+                          <span>Booking is transferable before the arrival.</span><br>
+                          <span>Refundable in 10 days.</span><br>
+                          <span>10% of the full price has to deposited for booking confirmation.</span><br>
+                          <span>Bikes from outside Pune has to be send by customer.</span><br>
+                          <span>Regarding the Start date of the modification and other info please call us.</span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12 text-center m-top10px">
+                          <button class="btn btn-lg confirm-book">Confirm Booking</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="col-xs-12 radicality-bg">
@@ -107,8 +212,9 @@
       </div>
       <div class="col-xs-10 col-xs-offset-1">
         <h1 class="text-uppercase text-center custom-underline">Highlights</h1>
+        <p class="text-center text-uppercase text-light-grey">Latest Events and Stories</p>
         <div class="row">
-          <div class="col-xs-11 col-xs-offset-1 col-sm-10 col-sm-offset-2 m-top-bottom2rem">
+          <div class="col-xs-11 col-xs-offset-1 col-sm-10 col-sm-offset-2 custom-margin">
             <div class="row">
               <div class="col-xs-4 no-padding highlights-box left">
                 <div class="carousel slide" id="highlights-carousel" data-ride="carousel">
@@ -118,13 +224,13 @@
                   </ol>
                   <div class="carousel-inner">
                     <div class="item active">
-                      <img class="img-responsive" src="images/highlights.jpg">
+                      <img class="img-responsive" src="images/highlights-l1.jpg">
                       <div class="carousel-caption">
                         <p class="text-uppercase text-right">First Project to be revealed on 27th</p>
                       </div>
                     </div>
                     <div class="item">
-                      <img class="img-responsive" src="images/about-top1.jpg">
+                      <img class="img-responsive" src="images/highlights-l2.jpg">
                       <div class="carousel-caption">
                         <p class="text-uppercase text-right">More Coming Soon</p>
                       </div>
@@ -141,17 +247,17 @@
                   </ol>
                   <div class="carousel-inner">
                     <div class="item active">
-                      <img class="img-responsive" src="images/highlights2.jpg">
+                      <img class="img-responsive" src="images/highlights-r1.jpg">
                       <div class="shade-overlay"></div>
                       <div class="carousel-caption">
                         <p class="text-uppercase">Creation and Logic of our Logo</p>
                       </div>
                     </div>
                     <div class="item">
-                      <img class="img-responsive" src="images/bike-engine.jpg">
+                      <img class="img-responsive" src="images/highlights-r2.jpg">
                       <div class="shade-overlay"></div>
                       <div class="carousel-caption">
-                        <p class="text-uppercase">Design is simple yet complex</p>
+                        <p class="text-uppercase">Creation and Logic of our Logo</p>
                       </div>
                     </div>
                   </div>
@@ -162,37 +268,57 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-12 parallax-home"></div>
-      <div class="col-xs-10 col-xs-offset-1">
-        <h1 class="text-center text-uppercase custom-underline">Our Perseverance</h1>
+      <div class="col-xs-12 parallax-window" data-parallax="scroll" data-image-src="images/indicators.jpg">
         <div class="row">
-          <div class="col-xs-12 m-top-bottom2rem perseverance">
+          <div class="col-xs-5 col-sm-4 quote-align">
+            <h1 class="text-white">" Design is <br>thinking<br>made visible "
+              <small class="text-white">Saul Bass</small>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <h1 class="text-center text-uppercase custom-underline">Our Expertise</h1>
+        <p class="text-center text-uppercase text-light-grey">What makes us different</p>
+        <div class="row">
+          <div class="col-xs-12 custom-margin perseverance">
             <div class="row">
-              <div class="col-xs-4 no-padding">
+              <div class="col-xs-10 col-sm-8 col-xs-offset-1 col-sm-offset-2 no-padding">
                 <div class="row">
-                  <div class="col-xs-10 col-xs-offset-1">
-                    <p class="content-text">"Adventure starts<br>where the roads<br>end"</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-8 no-padding">
-                <div class="row">
-                  <div class="col-xs-6 no-padding pad-top-bot">
-                    <img class="img-responsive pull-right" src="images/keychain.jpg">
+                  <div class="col-xs-4 col-xs-offset-1 no-padding pad-top">
+                    <img class="img-responsive pull-right" src="images/expertise1.jpg">
+                    <div class="img-overlay first">
+                      <p>Sturdy<br>Components</p>
+                    </div>
                   </div>
                   <div class="col-xs-6">
                     <div class="row">
                       <div class="col-xs-12 no-padding">
-                        <img class="img-responsive" src="images/fuel-tank.jpg">
+                        <img class="img-responsive m-top5px" src="images/expertise2.jpg">
+                        <div class="img-overlay second">
+                          <p>SRadical<br>&<br>Legal</p>
+                        </div>
                       </div>
-                      <div class="col-xs-12">
-                        <div class="row">
-                          <div class="col-xs-6 no-padding">
-                            <img class="img-responsive" src="images/headlight-other.jpg">
-                          </div>
-                          <div class="col-xs-6 no-padding">
-                            <img class="img-responsive extra-left" src="images/right-indicator.jpg">
-                          </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 no-padding">
+                    <div class="row">
+                      <div class="col-xs-4 no-padding">
+                        <img class="img-responsive" src="images/expertise3.jpg">
+                        <div class="img-overlay">
+                          <p>Sensible<br>Design</p>
+                        </div>
+                      </div>
+                      <div class="col-xs-4 no-padding">
+                        <img class="img-responsive pad-left-right" src="images/expertise4.jpg">
+                        <div class="img-overlay middle">
+                          <p>Minimalistic<br>Design</p>
+                        </div>
+                      </div>
+                      <div class="col-xs-4 no-padding">
+                        <img class="img-responsive" src="images/expertise5.jpg">
+                        <div class="img-overlay">
+                          <p>Precision upto<br>10 microns</p>
                         </div>
                       </div>
                     </div>
@@ -255,5 +381,13 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script>
+    $.validate();
+    $(document).ready(function() {
+      $(".parallax-window").parallax({ speed: 0.3 });
+    });
+  </script>
 </body>
 </html>

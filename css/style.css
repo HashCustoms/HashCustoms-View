@@ -22,6 +22,21 @@ body {
 
 .text-grey { color: #333 !important; }
 
+.text-light-grey { color: #888; }
+
+.quote-align {
+  position: relative;
+  top: 8rem;
+  left: 10%;
+  font-weight: 300;
+}
+
+.quote-align small {
+  position: relative;
+  top: 3rem;
+  left: -5rem;
+}
+
 .text-white { color: #fff; }
 
 .bg-black { background-color: #000; }
@@ -32,6 +47,8 @@ body {
   height: 32px;
   background: url(../images/hatch-bg.png);
 }
+
+.strip-shade.top { height: 36px; }
 
 .strip-shade h1 {
   margin-top: -1px;
@@ -49,27 +66,77 @@ body {
 .icon-bar { background-color: #000; }
 
 .logo-pos {
-  max-width: 75px;
+  max-width: 67px;
   margin-top: -20px;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 0;
+  left: 6px;
+  padding: 4px 0;
 }
 
 .navbar-custom > li > a {
   font-size: 20px;
   color: #333;
   text-shadow: none;
-  /* xs size border-bottom: 6px solid transparent;*/
-  transition: background-color 200ms, border-bottom 200ms;
+  transition: background 400ms ease;
+}
+
+.navbar-custom > li.active > a:before,
+.navbar-custom > li > a:before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 5px;
+  content: '';
+  transition: width 0 ease, background 400ms ease;
+}
+
+.navbar-custom > li.active > a:after,
+.navbar-custom > li > a:after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 0;
+  height: 5px;
+  background: #e00000;
+  content: '';
+  transition: width 400ms ease;
+}
+.navbar-custom > li.active > a:before,
+.navbar-custom > li > a:focus:before,
+.navbar-custom > li > a:hover:before {
+    width: 100%;
+    background: #e00000;
+    transition: width 400ms ease;
+}
+.navbar-custom > li.active > a:after,
+.navbar-custom > li > a:focus:after,
+.navbar-custom > li > a:hover:after {
+    width: 100%;
+    background: transparent;
+    transition: all 0 ease;
 }
 
 .navbar-custom > li.active > a,
 .navbar-custom > li > a:focus,
-.navbar-custom > li > a:hover {
+.navbar-custom > li > a:hover,
+.confirm-book {
   color: #fff;
   background-color: #8d0000;
-  border-bottom: 6px solid #e00000;
+  transition: all 400ms ease;
+}
+.confirm-book:hover {
+  color: #fff;
+  background-color: #af0000;
 }
 
-#top-carousel .carousel-inner img { margin-top: 28px; }
+#top-carousel .carousel-inner img { margin: 28px auto 0; }
 
 .carousel-indicators.custom li {
   z-index: 2;
@@ -93,21 +160,14 @@ body {
   transition: all 200ms;
 }
 
-.carousel-control.custom {
-  top: 46%;
-  width: 65px;
-  height: 65px;
-  background: rgba(0,0,0,.8);
-  border-radius: 50%;
-  opacity: .7;
-}
+.icon-prev.less { left: 30%; }
 
-.carousel-control.custom.left { left: 30px; }
-
-.carousel-control.custom.right { right: 30px; }
+.icon-next.less { right: 30%; }
 
 .btn.book-now {
   position: absolute;
+  top: 46.5%;
+  right: 12%;
   z-index: 2;
   background-color: rgba(0,0,0,.6);
   transition: top 200ms, bottom 200ms, left 200ms background-color 200ms;
@@ -116,10 +176,13 @@ body {
 .btn.book-now:hover,
 .btn.book-now:focus { background-color: #ddd; }
 
+.btn.book-now:hover a,
+.btn.book-now:focus a,
 .btn.book-now a:hover,
 .btn.book-now a:focus {
   color: #333;
   text-decoration: none;
+  outline: none;
 }
 
 .custom-underline {
@@ -203,14 +266,20 @@ body {
   background-image: linear-gradient(to top, rgba(0,0,0,.7) 10%, rgba(0,0,0,0) 70%);
 }
 
+.perseverance {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  background-color: #eee;
+}
+
 .perseverance img {
   margin: 2px;
+  cursor: pointer;
   border-radius: 3px;
 }
 
-.perseverance .pad-top-bot {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.perseverance .pad-top {
+  padding-top: 40px;
 }
 
 .perseverance .extra-left { margin-left: 6px; }
@@ -219,11 +288,15 @@ body {
 
 .p-bottom20rem { padding-bottom: 20rem; }
 
+.pad-left-right { padding: 0 4px; }
+
 .m-top10px { margin-top: 10px; }
 
-.m-top-bottom2rem {
+.m-top5px { margin-top: 5px !important; }
+
+.custom-margin {
   margin-top: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
 .m-right10px { margin-right: 10px; }
@@ -293,14 +366,13 @@ body {
   border-radius: 100%;
 }
 
-.parallax-home {
-  height: 40rem;
-  background: fixed url("../images/parallax-home.jpg") no-repeat center;
-  background-size: cover;
+.parallax-window {
+  min-height: 45rem;
+  background: transparent;
 }
 
 .parallax {
-  height: 40rem;
+  height: 45rem;
   background: fixed url("../images/about-bottom.jpg") no-repeat center;
   background-size: cover;
 }
@@ -335,11 +407,60 @@ body {
   background-color: #000;
 }
 
+#bookPopup .modal-content { background-color: rgba(255,255,255,.67); }
+
+#bookPopup .modal-header,
+#bookPopup .modal-footer { border: none; }
+
+#bookPopup .close {
+  text-shadow: none;
+  opacity: 1;
+}
+
+.img-overlay {
+  position: absolute;
+  top: 2px;
+  right: -2px;
+  bottom: 2px;
+  left: 2px;
+  color: #fff;
+  background-color: rgba(0,0,0,.7);
+  border-radius: 2px;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 500ms ease;
+}
+
+.img-overlay.first {
+  top: 42px;
+  right: 3px;
+  bottom: 3px;
+  left: -2px;
+}
+
+.img-overlay.second { top: 5px; }
+
+.img-overlay.middle {
+  right: 2px;
+  left: 6px;
+}
+
+.img-overlay p{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 27%;
+  font-size: 26px;
+  text-align: center;
+}
+
+.perseverance img:hover + .img-overlay,
+.img-overlay:hover { opacity: 0; }
+
 @media only screen and (min-width: 768px) {
-  .btn.book-now {
-    bottom: 11rem;
-    left: 14rem;
-  }
+  .logo-pos { max-width: 77px; }
+
+  #bookPopup .modal-dialog { margin: 5% auto; }
 
   .text-left-sm { text-align: left; }
 
@@ -347,14 +468,12 @@ body {
 }
 
 @media only screen and (min-width: 992px) {
-  .btn.book-now {
-    top: 22rem;
-    bottom: initial;
-    left: 25rem;
-  }
+  .logo-pos { margin-left: calc(100% - 5rem); }
 }
 
 @media only screen and (max-width: 767px) {
+  .no-pad-xs { padding: 0; }
+
   .carousel-indicators.custom { bottom: 0; }
 
   .carousel-indicators.custom li {
@@ -368,20 +487,6 @@ body {
     height: 13px;
     margin: 0 3px;
     border: 4px solid #fff;
-  }
-
-  .carousel-control.custom {
-    width: 36px;
-    height: 36px;
-  }
-
-  .carousel-control.custom.left { left: 10px; }
-
-  .carousel-control.custom.right { right: 10px; }
-
-  .btn.book-now {
-    bottom: 5rem;
-    left: 7rem;
   }
 
   .radicality-bg h1 { font-size: 24px; }
@@ -399,9 +504,5 @@ body {
     transform: scale(1,.6);
   }
 
-  .btn.book-now {
-    bottom: 0;
-    left: 1rem;
-    font-size: 12px;
-  }
+  .btn.book-now { font-size: 11px; }
 }
