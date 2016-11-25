@@ -15,7 +15,7 @@
   <nav class="navbar navbar-fixed-top">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-12 strip-shade">
+        <div class="col-xs-12 strip-shade top no-pad-xs">
           <h1 class="text-uppercase">Hash Customs</h1>
         </div>
       </div>
@@ -28,7 +28,7 @@
             <button class="navbar-toggle pull-right visible-xs" data-toggle="collapse" data-target="#myNavbar">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
-              <span class="icon-bar"></span>                        
+              <span class="icon-bar"></span>
             </button>
             <div class="col-xs-12 col-sm-10 col-md-11">
               <ul class="nav navbar-nav navbar-right collapse navbar-collapse light navbar-custom" id="myNavbar">
@@ -39,7 +39,7 @@
                   <a href="#">Concepts</a>
                 </li>
                 <li>
-                  <a href="/gallery">Gallery</a>
+                  <a href="#">Gallery</a>
                 </li>
                 <li class="active">
                   <a>About Us</a>
@@ -56,16 +56,20 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12 no-padding">
-        <img class="img-responsive" src="images/about-top.jpg">
+        <img class="img-responsive m-top36px" src="images/about-top.jpg">
       </div>
       <div class="col-xs-10 col-xs-offset-1 text-center">
-        <h1 class="text-uppercase custom-underline">We Are</h1>
+        <h1 class="text-uppercase custom-underline">Who We Are</h1>
+        <p class="text-center text-uppercase text-light-grey">A small description about us</p>
         <p class="light content-text">Our motorcycle concepts are evolved in studios, not garages. Every prototype developed is unique and every design concept is limited. There is a logical explanation to every aspect of concepts (even the number of bikes).These aspects are analytically determined at the beginning of every project. A prototype once assigned and developed for a client is never imitated.<br>
         Primarily, conceptualization is the stage of design development where we concentrate the most.<br>
         We exist to design, evolve and deliver innovative yet subtle concepts.</p>
       </div>
+    </div>
+    <div class="row">
       <div class="col-xs-10 col-xs-offset-1 p-bottom7rem">
         <h1 class="text-uppercase text-center custom-underline">Our Vision</h1>
+        <p class="text-center text-uppercase text-light-grey">Our Idealogy before Designing</p>
         <p class="light content-text">We push our limits to meet the perfect mix of practicality and radicality</p>
         <div class="row light">
           <div class="col-xs-12 vision-strip">
@@ -88,14 +92,19 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="row">
       <div class="col-xs-12 bg-grey p-bottom20rem">
         <div class="row">
           <div class="col-xs-10 col-xs-offset-1 text-center">
-            <h1 class="text-uppercase custom-underline white">How It Happens</h1>
+            <h1 class="text-uppercase custom-underline white">How It's Made</h1>
+            <p class="text-center text-uppercase text-light-grey">The process of Design Development</p>
             <p class="light content-text"></p>
           </div>
         </div>
       </div>
+    </div>
+    <div class="row">
       <div class="col-xs-12">
         <div class="row">
           <div class="col-xs-10 col-xs-offset-1 text-center text-uppercase">
@@ -168,15 +177,27 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-12 parallax"></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 parallax-window" data-parallax="scroll" data-image-src="images/bike-engine.jpg">
+        <div class="row">
+          <div class="col-xs-5 col-sm-4 quote-align">
+            <h1 class="text-white text-center">" Good Design <br>is<br>Good Business "
+              <small class="text-white pull-left">Thomas J. Watson JR</small>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-xs-10 col-xs-offset-1 text-center">
         <h1 class="text-uppercase custom-underline">Reach Us At</h1>
-        <p class="semi-bold content-text">EMAIL:
+        <p class="semi-bold content-text no-mbot">EMAIL:
           <span class="light">
             <a class="text-black" href="mailto:enquiry@hashcustoms.com">enquiry@hashcustoms.com</a>
           </span>
         </p>
-        <p class="semi-bold content-text">CONTACT US:
+        <p class="semi-bold content-text no-mtop">CONTACT US:
           <span class="light">
             <a class="text-black" href="tel:+91 7507610712">+91 7507610712</a>
           </span>
@@ -192,7 +213,7 @@
           <div class="row">
             <div class="col-xs-12 col-sm-5 text-center text-right-sm">
               <h5 class="text-white">Follow us on:
-                <a class="social-icons" href="//facebook.com/hashcustoms/">
+                <a class="social-icons" href="#">
                   <i class="fa fa-facebook-official"></i>
                 </a>
                 <a class="social-icons" href="#">
@@ -234,5 +255,11 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script>
+    $(document).load(function() {
+      $(".parallax-window").parallax({ speed: 0.3 });
+    });
+  </script>
 </body>
 </html>

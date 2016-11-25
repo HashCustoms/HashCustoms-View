@@ -18,6 +18,10 @@ body {
 
 .no-padding { padding: 0; }
 
+.no-mtop { margin-top: 0; }
+
+.no-mbot { margin-bottom: 0; }
+
 .text-black { color: #000; }
 
 .text-grey { color: #333 !important; }
@@ -292,6 +296,8 @@ body {
 
 .m-top10px { margin-top: 10px; }
 
+.m-top36px { margin-top: 36px; }
+
 .m-top5px { margin-top: 5px !important; }
 
 .custom-margin {
@@ -369,12 +375,6 @@ body {
 .parallax-window {
   min-height: 45rem;
   background: transparent;
-}
-
-.parallax {
-  height: 45rem;
-  background: fixed url("../images/about-bottom.jpg") no-repeat center;
-  background-size: cover;
 }
 
 .social-icons {
