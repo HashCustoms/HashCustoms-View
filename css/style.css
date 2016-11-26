@@ -37,6 +37,11 @@ body {
   z-index: 10;
 }
 
+.affix.gallery {
+  top: 19px;
+  height: 66px;
+}
+
 .quote-align {
   position: relative;
   top: 8rem;
@@ -413,15 +418,9 @@ body {
 
 .parallax-window.less { min-height: 30rem; }
 
-.flex-center {
-  display: flex;
-  align-items: center;
-}
-
-.flex-center h1 {
-  width: 100%;
+.jumbo {
+  margin-top: 12%;
   font-size: 11rem;
-  color: #fff;
 }
 
 .social-icons {
@@ -529,6 +528,48 @@ body {
 .perseverance img:hover + .img-overlay,
 .img-overlay:hover { opacity: 0; }
 
+.gallery-img { cursor: pointer; }
+
+#gallery-carousel .carousel-inner img { border-radius: 3px; }
+
+.full-view-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0,0,0,.86);
+  transform: scale(2);
+  opacity: 0;
+  transition: transform 200ms, opacity 300ms;
+}
+
+.full-view-overlay.view {
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 500ms, opacity 200ms;
+}
+
+.full-view-content {
+  max-width: 70%;
+  padding: 20px;
+  margin: auto;
+}
+
+.full-view-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 45px !important;
+  cursor: pointer;
+  color: #888;
+}
+
+.full-view-close:hover { color: #eee; }
+
 @media only screen and (min-width: 768px) {
   .logo-pos { max-width: 77px; }
 
@@ -566,6 +607,11 @@ body {
   .radicality-bg p { font-size: 17px; }
 
   .radicality-bg p span { font-size: 14px; }
+
+  .affix {
+    top: 20px;
+    height: 57px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
