@@ -18,6 +18,8 @@ body {
 
 .no-padding { padding: 0; }
 
+.no-overflow-x { overflow-x: hidden; }
+
 .no-mtop { margin-top: 0; }
 
 .no-mbot { margin-bottom: 0; }
@@ -28,11 +30,23 @@ body {
 
 .text-light-grey { color: #888; }
 
+.off-white-bg { background-color: #eee; }
+
+.affix {
+  top: 23px;
+  z-index: 10;
+}
+
 .quote-align {
   position: relative;
   top: 8rem;
   left: 10%;
   font-weight: 300;
+}
+
+.quote-align.more {
+  top: 9rem;
+  left: 7%;
 }
 
 .quote-align small {
@@ -270,13 +284,19 @@ body {
   background-image: linear-gradient(to top, rgba(0,0,0,.7) 10%, rgba(0,0,0,0) 70%);
 }
 
+.white-hatch-bg {
+  background: #fff url(../images/white-hatch-bg.png) no-repeat center;
+  background-size: cover;
+}
+
 .perseverance {
   padding-top: 35px;
   padding-bottom: 35px;
   background-color: #eee;
 }
 
-.perseverance img {
+.perseverance img,
+.concepts-showdown img {
   margin: 2px;
   cursor: pointer;
   border-radius: 3px;
@@ -292,6 +312,11 @@ body {
 
 .p-bottom20rem { padding-bottom: 20rem; }
 
+.concepts-showdown {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .pad-left-right { padding: 0 4px; }
 
 .m-top10px { margin-top: 10px; }
@@ -300,12 +325,21 @@ body {
 
 .m-top5px { margin-top: 5px !important; }
 
+.m-top9rem { margin-top: 9rem; }
+
+.m-bot6rem { margin-bottom: 6rem; }
+
 .custom-margin {
   margin-top: 2rem;
   margin-bottom: 5rem;
 }
 
 .m-right10px { margin-right: 10px; }
+
+.pos-top-neg8px {
+  position: relative;
+  top: -8px;
+}
 
 .f-size20px { font-size: 20px; }
 
@@ -377,6 +411,19 @@ body {
   background: transparent;
 }
 
+.parallax-window.less { min-height: 30rem; }
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-center h1 {
+  width: 100%;
+  font-size: 11rem;
+  color: #fff;
+}
+
 .social-icons {
   display: inline-block;
   margin-right: 10px;
@@ -423,6 +470,8 @@ body {
   right: -2px;
   bottom: 2px;
   left: 2px;
+  display: flex;
+  align-items: center;
   color: #fff;
   background-color: rgba(0,0,0,.7);
   border-radius: 2px;
@@ -445,13 +494,36 @@ body {
   left: 6px;
 }
 
-.img-overlay p{
-  display: flex;
-  align-items: center;
-  height: 100%;
-  padding-left: 27%;
+.img-overlay p {
+  width: 100%;
+  padding: 20px;
   font-size: 26px;
   text-align: center;
+}
+
+.concepts-showdown .second-col { margin-top: -5.1rem; }
+
+.concepts-showdown .second-col img { margin-left: 7px; }
+
+.disalign-right {
+  float: right;
+  margin-right: 26px;
+}
+
+.disalign-left { margin-left: -20px; }
+
+.concepts-showdown .img-overlay {
+  right: 13px;
+  left: 17px;
+}
+
+.concepts-showdown .first { padding-top: 15px; }
+
+.concepts-showdown .first .img-overlay { top: 17px; }
+
+.concepts-showdown .second-col .img-overlay {
+  right: 8px;
+  left: 22px;
 }
 
 .perseverance img:hover + .img-overlay,
