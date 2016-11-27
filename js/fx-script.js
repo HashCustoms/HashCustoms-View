@@ -5,22 +5,11 @@ $(document).ready(function() {
         $carousel = $("#gallery-carousel"),
         $imgViewOverlay = $(".full-view-overlay"),
         $closePreview = $(".full-view-close"),
-        $parllaxObject = $(".parallax-window");
+        $parllaxObject = $(".parallax-window"),
+        $body = $carousel.parents("body");
     $radioObject.prop('disabled', true).parent().addClass("hide");
     $parllaxObject.parallax({ speed: 0.3 });
     $carousel.carousel('pause');
-    $galleryImgObject.on('click', function() {
-        $this = $(this);
-        $imgOrder = $this.data("order");
-        $carousel.carousel($imgOrder);
-        $imgViewOverlay.removeClass("hide");
-        setTimeout(function() { $imgViewOverlay.addClass("view"); }, 400);
-        $carousel.carousel('pause');
-    });
-    $closePreview.on('click', function() {
-        $imgViewOverlay.removeClass("view");
-        setTimeout(function() { $imgViewOverlay.addClass("hide"); }, 200);
-    });
     $bookBtn.on('click', function() {
         $.ajax({
             type: "GET",
@@ -35,5 +24,23 @@ $(document).ready(function() {
                 });
             }
         });
+    });
+    $galleryImgObject.on('click', function() {
+        $this = $(this);
+        $imgOrder = $this.data("order");
+        $carousel.carousel($imgOrder);
+        $imgViewOverlay.removeClass("hide");
+        setTimeout(function() { $imgViewOverlay.addClass("view"); }, 400);
+        $carousel.carousel('pause');
+    });
+    $closePreview.on('click', function() {
+        $imgViewOverlay.removeClass("view");
+        setTimeout(function() { $imgViewOverlay.addClass("hide"); }, 200);
+    });
+    $body.on('keydown', function(evt) {
+        if (evt.keyCode == 27) {
+            $imgViewOverlay.removeClass("view");
+            setTimeout(function() { $imgViewOverlay.addClass("hide"); }, 200);
+        }
     });
 });

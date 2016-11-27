@@ -119,7 +119,7 @@
                         </div>
                         <div class="col-xs-8">
                           <input class="form-control" id="contact" name="contact" data-validation="required custom"
-                          data-validation-regexp="^(\+[0-9]{13})$" data-validation-error-msg-required="Enter Mobile No." data-validation-error-msg-custom="Invalid mobile no." type="text" maxlength="13">
+                          data-validation-regexp="^([+91 ]+\d{10})$" data-validation-error-msg-required="Enter Mobile No." data-validation-error-msg-custom="Invalid mobile no." type="text" maxlength="14">
                         </div>
                       </div>
                       <div class="row">
@@ -480,8 +480,11 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
   <script src="js/parallax.min.js"></script>
+  <script src="js/jquery.formatter.min.js"></script>
   <script src="js/fx-script.js"></script>
   <script>
+    var $contactInput = $("#contact");
+    $contactInput.formatter({ 'pattern': '+91 {{9999999999}}' });
     $.validate();
   </script>
 </body>
