@@ -90,11 +90,14 @@
 /* Disabled style */
 [type="radio"]:disabled:not(:checked) + label:before,
 [type="radio"]:disabled:checked + label:before {
-  background-color: transparent;
+  background-color: rgba(0,0,0,.2);
   border-color: rgba(0,0,0,.26);
 }
 
-[type="radio"]:disabled + label { color: rgba(0,0,0,.26); }
+[type="radio"]:disabled + label {
+  cursor: default;
+  color: #666;
+}
 
 [type="radio"]:disabled:not(:checked) + label:before { border-color: rgba(0,0,0,.26); }
 
@@ -414,7 +417,7 @@ body {
 
 .concepts-showdown {
   padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
 }
 
 .pad-left-right { padding: 0 4px; }
@@ -428,6 +431,8 @@ body {
 .m-top9rem { margin-top: 9rem; }
 
 .m-bot6rem { margin-bottom: 6rem; }
+
+.m-left22px { margin-left: 22px; }
 
 .custom-margin {
   margin-top: 2rem;
@@ -595,7 +600,7 @@ body {
   text-align: center;
 }
 
-.concepts-showdown .second-col { margin-top: -5.1rem; }
+.concepts-showdown .second-col { margin-top: -6.5rem; }
 
 .concepts-showdown .second-col img { margin-left: 7px; }
 
@@ -717,3 +722,4 @@ body {
 
   .btn.book-now { font-size: 11px; }
 }
+

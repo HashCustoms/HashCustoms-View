@@ -7,7 +7,7 @@ $(document).ready(function() {
         $closePreview = $(".full-view-close"),
         $parllaxObject = $(".parallax-window"),
         $body = $carousel.parents("body");
-    $radioObject.prop('disabled', true).parent().addClass("hide");
+    $radioObject.prop('disabled', true);
     $parllaxObject.parallax({ speed: 0.3 });
     $carousel.carousel('pause');
     $bookBtn.on('click', function() {
@@ -20,7 +20,7 @@ $(document).ready(function() {
                 newData = data.available;
                 $(newData).each(function(i, value) {
                     id = "#num" + value;
-                    $(id).prop('disabled', false).parent().removeClass("hide");
+                    $(id).prop('disabled', false);
                 });
             }
         });
