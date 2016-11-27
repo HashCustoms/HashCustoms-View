@@ -6,6 +6,103 @@
     url("//db.onlinewebfonts.com/t/71b14c7b971cf8d9493bbc5883cb158f.ttf") format("truetype");
 }
 
+/***************
+  Radio Buttons
+***************/
+/* Remove default Radio Buttons */
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+  position: absolute;
+  left: -9999px;
+  visibility: hidden;
+}
+
+[type="radio"]:not(:checked) + label,
+[type="radio"]:checked + label {
+  position: relative;
+  z-index: 1;
+  padding-left: 8px;
+  display: inline-block;
+  height: 25px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 25px;
+  cursor: pointer;
+  -webkit-transition: background-color .28s ease;
+  -moz-transition: background-color .28s ease;
+  -o-transition: background-color .28s ease;
+  -ms-transition: background-color .28s ease;
+  transition: background-color .28s ease;
+  -webkit-user-select: none;
+  /* webkit (safari, chrome) browsers */
+  -moz-user-select: none;
+  /* mozilla browsers */
+  -khtml-user-select: none;
+  /* webkit (konqueror) browsers */
+  -ms-user-select: none;
+  /* IE10+ */
+}
+
+/* Unchecked styles */
+[type="radio"]:not(:checked) + label:before { border: 2px solid #5a5a5a; }
+
+[type="radio"] + label:before,
+[type="radio"] + label:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 30px;
+  height: 30px;
+  margin: -2px;
+  content: '';
+  -webkit-transition: background-color .28s ease;
+  -moz-transition: background-color .28s ease;
+  -o-transition: background-color .28s ease;
+  -ms-transition: background-color .28s ease;
+  transition: background-color .28s ease;
+}
+
+/* Checked styles */
+[type="radio"]:checked + label:before { border: 2px solid #43a047; }
+
+[type="radio"]:not(:checked) + label:after {
+  z-index: -1;
+  border: 2px solid #5a5a5a;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+
+[type="radio"]:checked + label:after {
+  z-index: -1;
+  background-color: #43a047;
+  border: 2px solid #43a047;
+  -webkit-transform: scale(.9);
+  -moz-transform: scale(.9);
+  -ms-transform: scale(.9);
+  -o-transform: scale(.9);
+  transform: scale(.9);
+}
+
+/* Disabled style */
+[type="radio"]:disabled:not(:checked) + label:before,
+[type="radio"]:disabled:checked + label:before {
+  background-color: transparent;
+  border-color: rgba(0,0,0,.26);
+}
+
+[type="radio"]:disabled + label { color: rgba(0,0,0,.26); }
+
+[type="radio"]:disabled:not(:checked) + label:before { border-color: rgba(0,0,0,.26); }
+
+[type="radio"]:disabled:checked + label:after {
+  background-color: rgba(0,0,0,.26);
+  border-color: #bdbdbd;
+}
+
 html,
 body {
   font-family: 'Roboto';
@@ -192,21 +289,19 @@ body {
   top: 46.5%;
   right: 12%;
   z-index: 2;
+  color: #fff;
   background-color: rgba(0,0,0,.6);
-  transition: top 200ms, bottom 200ms, left 200ms background-color 200ms;
+  transition: color 300ms ease-in, background-color 300ms ease-in;
 }
 
-.btn.book-now:hover,
-.btn.book-now:focus { background-color: #ddd; }
-
-.btn.book-now:hover a,
-.btn.book-now:focus a,
-.btn.book-now a:hover,
-.btn.book-now a:focus {
+.btn.book-now:hover {
   color: #333;
+  background-color: #ccc;
   text-decoration: none;
   outline: none;
 }
+
+.radio-bot { margin: 1.4rem 15px; }
 
 .custom-underline {
   line-height: 1.5;
@@ -572,8 +667,6 @@ body {
 
 @media only screen and (min-width: 768px) {
   .logo-pos { max-width: 77px; }
-
-  #bookPopup .modal-dialog { margin: 5% auto; }
 
   .text-left-sm { text-align: left; }
 
