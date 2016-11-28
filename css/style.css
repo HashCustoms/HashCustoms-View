@@ -1,9 +1,8 @@
 @charset "utf-8";
 
-@font-face {font-family: "Square721 BT Bold";
-    src: url("//db.onlinewebfonts.com/t/71b14c7b971cf8d9493bbc5883cb158f.eot");
-    src: url("//db.onlinewebfonts.com/t/71b14c7b971cf8d9493bbc5883cb158f.eot?#iefix") format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/71b14c7b971cf8d9493bbc5883cb158f.ttf") format("truetype");
+@font-face {
+  font-family: "Square721 BT Bold";
+  src: url("../fonts/Square721-BT-Bold.ttf") format("truetype");
 }
 
 /***************
