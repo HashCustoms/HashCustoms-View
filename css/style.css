@@ -114,13 +114,20 @@ body {
 
 .light { font-weight: 300; }
 
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-center.column { flex-direction: column; }
+
 .semi-bold { font-weight: 500; }
 
 .no-padding { padding: 0; }
 
 .no-overflow-x { overflow-x: hidden; }
 
-.no-mtop { margin-top: 0; }
+.no-mtop { margin-top: -2rem !important; }
 
 .no-mbot { margin-bottom: 0; }
 
@@ -144,8 +151,7 @@ body {
 
 .quote-align {
   position: relative;
-  top: 8rem;
-  left: 10%;
+  left: 50%;
   font-weight: 300;
 }
 
@@ -156,8 +162,7 @@ body {
 
 .quote-align small {
   position: relative;
-  top: 3rem;
-  left: -5rem;
+  left: 32%;
 }
 
 .text-white { color: #fff; }
@@ -435,6 +440,10 @@ body {
 .h-fit { height: 28.1rem; }
 
 .m-bot6rem { margin-bottom: 6rem; }
+
+.m-bot-neg6rem { margin-bottom: -6rem; }
+
+.m-left20px { margin-left: 20px; }
 
 .m-left22px { margin-left: 22px; }
 
@@ -726,4 +735,3 @@ body {
 
   .btn.book-now { font-size: 11px; }
 }
-
