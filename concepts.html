@@ -71,21 +71,229 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12 m-bot6rem parallax-window" data-parallax="scroll" data-image-src="images/concepts-parallax1.jpg"></div>
+      <div class="col-xs-12 m-bot6rem parallax-window" data-parallax="scroll" data-image-src="images/concepts-parallax1.jpg">
+        <button class="btn book-now text-uppercase" data-toggle="modal" data-target="#bookPopup" type="button">
+          <span class="light">Own a Prototype</span><br>
+          <span class="semi-bold">Book Now</span>
+        </button>
+        <div id="bookPopup" class="modal fade">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="text-center text-uppercase modal-title">Book Now</h3>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <form name="bookingForm">
+                      <div class="row">
+                        <div class="col-xs-4 text-right">
+                          <h4 class="text-capitalize text-grey">Email</h4>
+                        </div>
+                        <div class="col-xs-8">
+                          <input class="form-control" id="username" name="username" data-validation="required custom" data-validation-regexp="^(([a-zA-Z0-9]+[^\@]?[a-zA-Z0-9]+)+[\@]([a-zA-Z0-9]+[^\@]?)*([a-zA-Z0-9]+[\.][a-zA-Z]+))$" data-validation-error-msg-required="Email Address is required." data-validation-error-msg-custom="Invalid email address." type="text">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-4 text-right">
+                          <h4 class="text-capitalize text-grey">Mobile No.</h4>
+                        </div>
+                        <div class="col-xs-8">
+                          <input class="form-control" id="contact" name="contact" data-validation="required custom"
+                          data-validation-regexp="^([+91 ]+\d{10})$" data-validation-error-msg-required="Enter Mobile No." data-validation-error-msg-custom="Invalid mobile no." type="text" maxlength="14">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-4 text-right">
+                          <h4 class="text-capitalize text-grey">Project</h4>
+                        </div>
+                        <div class="col-xs-8">
+                          <div class="form-group">
+                            <select class="form-control" id="project" name="project-name" data-validation="required" data-validation-error-msg-required="Project Name is required.">
+                              <option disabled selected>Choose a design concept</option>
+                              <option>Morse Code</option>
+                              <option disabled>Future Vision (Coming Soon)</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-4 text-right">
+                          <h4 class="text-capitalize text-grey">Prototype Number</h4>
+                          <span class="text-grey">(Can be your favourite or lucky number)</span>
+                        </div>
+                        <div class="col-xs-8">
+                          <p class="text-grey">Pick your favourite number</p>
+                          <div class="row">
+                            <div class="col-xs-11">
+                              <div class="row">
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num1" name="prototype" type="radio">
+                                  <label for="num1">1</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num2" name="prototype" type="radio">
+                                  <label for="num2">2</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num3" name="prototype" type="radio">
+                                  <label for="num3">3</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num4" name="prototype" type="radio">
+                                  <label for="num4">4</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num5" name="prototype" type="radio">
+                                  <label for="num5">5</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num6" name="prototype" type="radio">
+                                  <label for="num6">6</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num7" name="prototype" type="radio">
+                                  <label for="num7">7</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num8" name="prototype" type="radio">
+                                  <label for="num8">8</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num9" name="prototype" type="radio">
+                                  <label for="num9">9</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num10" name="prototype" type="radio">
+                                  <label for="num10">10</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num11" name="prototype" type="radio">
+                                  <label for="num11">11</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num12" name="prototype" type="radio">
+                                  <label for="num12">12</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num13" name="prototype" type="radio">
+                                  <label for="num13">13</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num14" name="prototype" type="radio">
+                                  <label for="num14">14</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num15" name="prototype" type="radio">
+                                  <label for="num15">15</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num16" name="prototype" type="radio">
+                                  <label for="num16">16</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num17" name="prototype" type="radio">
+                                  <label for="num17">17</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num18" name="prototype" type="radio">
+                                  <label for="num18">18</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num19" name="prototype" type="radio">
+                                  <label for="num19">19</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num20" name="prototype" type="radio">
+                                  <label for="num20">20</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num21" name="prototype" type="radio">
+                                  <label for="num21">21</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num22" name="prototype" type="radio">
+                                  <label for="num22">22</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num23" name="prototype" type="radio">
+                                  <label for="num23">23</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num24" name="prototype" type="radio">
+                                  <label for="num24">24</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num25" name="prototype" type="radio">
+                                  <label for="num25">25</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num26" name="prototype" type="radio">
+                                  <label for="num26">26</label>
+                                </div>
+                                <div class="col-xs-3 col-sm-2 col-md-1">
+                                  <input id="num27" name="prototype" type="radio">
+                                  <label for="num27">27</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <p class="text-grey">The chosen number will be inscribed on your motorcycle</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-4 text-right">
+                          <h4 class="text-capitalize text-grey">Vehicle Number</h4>
+                        </div>
+                        <div class="col-xs-8">
+                          <input class="form-control" id="vehicle-num" name="vehicleNumber" data-validation="required" data-validation-error-msg-required="Vehicle Number is required." type="text" placeholder="e.g. MH01 AX 4040">
+                        </div>
+                      </div>
+                      <div class="row m-top10px">
+                        <div class="col-xs-4 text-right">
+                          <p class="text-uppercase text-grey">Note:</p>
+                        </div>
+                        <div class="col-xs-8">
+                          <span>Protytpe number can be changed as per the availability.</span><br>
+                          <span>A number once assigned to the client will never be repeated.</span><br>
+                          <span>Booking is transferable before the arrival.</span><br>
+                          <span>Refundable in 10 days.</span><br>
+                          <span>10% of the full price has to deposited for booking confirmation.</span><br>
+                          <span>Bikes from outside Pune has to be send by customer.</span><br>
+                          <span>Regarding the start date of the modification and other info please call us.</span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12 text-center m-top10px">
+                          <button class="btn btn-lg confirm-book">Confirm Booking</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="row">
       <div class="col-xs-10 col-xs-offset-1">
         <h2 class="text-uppercase text-center">Logical Brief</h2>
         <p class="text-center text-uppercase text-light-grey">Read here for all your doubts</p>
-        <p class="light content-text">As we know it the project morse code is based on the morse code. Which was used in wars earlier with idea of converting every number or alphabet into dots and dashes so that the message can be conveyed in the form of long and short taps. Thereby the project morse code will be based on a unique number that will be assigned to every client and the same message will be conveyed over the model of the client in the expression of stripes or the pattern of light which can be recognised giving the motorcycle a unique identity. There will be only 27 motorcycles rhat will be converted into morse code as a tribute to the inventor of the code, Samuel Morse, an american painter and inventor (born on 27th April 1791).<br>
-        Keeping the radicality in mind the concept has been evolved reflecting minimalism as well, because thats what the morse code conveys with the ideas of simplifying every sentence and word into dots and dashes.</p>
+        <p class="light content-text">Our first project is based on the morse code, which was used in wars earlier, with an idea of converting every number or alphabet into dots and dashes, so that the message can be conveyed in the form of long and short taps. Every morse code motorcycle will be based on a unique number that will be assigned to client and the same message will be conveyed over the bike in the form of stripes or the pattern of light which can be recognised, giving the motorcycle a unique identity.There will be only 27 motorcycles that will be coverted into morse code as a tribute to the inventor of the code, Sameul Morse, an american painter and inventor (born on 27th April 1791).<br>
+        Keeping the radicality in mind, the concept has been evolved reflecting minimalism and the expression of abstraction as well, because that is what the morse code conveys with the idea of simplifying every sentence and word into dots and dashes. The bike can be a turned into a scrambler, cafe racer or a naked street as per the request of the customer.</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12 parallax-window less" data-parallax="scroll" data-image-src="images/concepts-parallax2.jpg">
+      <div class="col-xs-12 flex-center parallax-window less rel-top-neg5rem" data-parallax="scroll" data-image-src="images/concepts-parallax2.jpg">
         <div class="row">
-          <div class="col-xs-5 col-sm-4 quote-align more">
-            <h1 class="text-uppercase text-white text-center">" A Man is Known <br>by the Design he Keeps "</h1>
+          <div class="col-xs-12 quote-align less rel-top5rem">
+            <h1 class="text-uppercase text-white">" A Man is Known<br>
+            <span class="m-left20px">by the Design</span><br>
+            <span class="m-left20px">He Keeps "</span>
+          </h1>
           </div>
         </div>
       </div>
@@ -172,8 +380,8 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12 parallax-window" data-parallax="scroll" data-image-src="images/highlights-r1.jpg">
-        <h1 class="text-uppercase text-center text-white jumbo">Coming Soon</h1>
+      <div class="col-xs-12 flex-center parallax-window rel-top-neg5rem" data-parallax="scroll" data-image-src="images/highlights-r1.jpg">
+        <h1 class="text-uppercase text-center text-white jumbo rel-top5rem">Coming Soon</h1>
       </div>
     </div>
   </div>
@@ -228,6 +436,12 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="js/parallax.min.js"></script>
+  <script src="js/jquery.formatter.min.js"></script>
   <script src="js/fx-script.js"></script>
+  <script>
+    var $contactInput = $("#contact");
+    $contactInput.formatter({ 'pattern': '+91 {{9999999999}}' });
+    $.validate();
+  </script>
 </body>
 </html>

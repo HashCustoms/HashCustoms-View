@@ -155,10 +155,7 @@ body {
   font-weight: 300;
 }
 
-.quote-align.more {
-  top: 9rem;
-  left: 7%;
-}
+.quote-align.less { left: 32%; }
 
 .quote-align small {
   position: relative;
@@ -441,11 +438,19 @@ body {
 
 .m-bot6rem { margin-bottom: 6rem; }
 
-.m-bot-neg6rem { margin-bottom: -6rem; }
-
 .m-left20px { margin-left: 20px; }
 
 .m-left22px { margin-left: 22px; }
+
+.rel-top-neg5rem {
+  position: relative;
+  top: -5rem;
+}
+
+.rel-top5rem {
+  position: relative;
+  top: 5rem;
+}
 
 .custom-margin {
   margin-top: 2rem;
@@ -532,7 +537,7 @@ body {
 .parallax-window.less { min-height: 30rem; }
 
 .jumbo {
-  margin-top: 12%;
+  width: 100%;
   font-size: 11rem;
 }
 
