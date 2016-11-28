@@ -179,7 +179,7 @@ body {
 .strip-shade h1 {
   display: inline-block;
   margin-top: -1px;
-  margin-left: 16%;
+  margin-left: 12%;
   font-family: 'Square721 BT Bold';
   color: #767676;
   transform: scale(1.1,.6);
@@ -437,7 +437,7 @@ body {
 
 .m-bot6rem { margin-bottom: 6rem; }
 
-.m-left20px { margin-left: 20px; }
+.m-left20px { margin-left: 14px; }
 
 .rel-top-neg5rem {
   position: relative;
@@ -696,9 +696,9 @@ body {
 @media only screen and (min-width: 992px) {
   .logo-pos { margin-left: calc(100% - 5rem); }
 
-  .quote-align.less { left: 32%; }
+  .quote-align.less { left: 40%; }
 
-  .quote-align h1 { font-size: 36px; }
+  .quote-align h1 { font-size: 28px; }
 }
 
 @media only screen and (max-width: 991px) {
