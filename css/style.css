@@ -155,12 +155,14 @@ body {
   font-weight: 300;
 }
 
-.quote-align.less { left: 32%; }
-
 .quote-align small {
   position: relative;
   left: 32%;
 }
+
+.quote-align h1 { font-size: 24px; }
+
+.quote-align.less { left: 10%; }
 
 .text-white { color: #fff; }
 
@@ -176,6 +178,7 @@ body {
 .strip-shade.top { height: 36px; }
 
 .strip-shade h1 {
+  display: inline-block;
   margin-top: -1px;
   margin-left: 16%;
   font-family: 'Square721 BT Bold';
@@ -195,12 +198,7 @@ body {
   margin-top: -20px;
 }
 
-.navbar-toggle {
-  position: absolute;
-  top: 0;
-  left: 6px;
-  padding: 4px 0;
-}
+.navbar-toggle { padding: 4px 0; }
 
 .navbar-custom > li > a {
   font-size: 20px;
@@ -298,6 +296,8 @@ body {
   background-color: rgba(0,0,0,.6);
   transition: color 300ms ease-in, background-color 300ms ease-in;
 }
+
+.btn.book-now:focus { outline: none; }
 
 .btn.book-now:hover {
   color: #333;
@@ -439,8 +439,6 @@ body {
 .m-bot6rem { margin-bottom: 6rem; }
 
 .m-left20px { margin-left: 20px; }
-
-.m-left22px { margin-left: 22px; }
 
 .rel-top-neg5rem {
   position: relative;
@@ -698,6 +696,14 @@ body {
 
 @media only screen and (min-width: 992px) {
   .logo-pos { margin-left: calc(100% - 5rem); }
+
+  .quote-align.less { left: 32%; }
+
+  .quote-align h1 { font-size: 36px; }
+}
+
+@media only screen and (max-width: 991px) {
+  .parallax-window { min-height: 27rem; }
 }
 
 @media only screen and (max-width: 767px) {
@@ -728,6 +734,12 @@ body {
     top: 20px;
     height: 57px;
   }
+
+  .parallax-window { min-height: 20rem; }
+
+  .quote-align h1 { font-size: 18px; }
+
+  .img-overlay p { font-size: 14px; }
 }
 
 @media only screen and (max-width: 600px) {
@@ -739,4 +751,9 @@ body {
   }
 
   .btn.book-now { font-size: 11px; }
+
+  .highlights-box .carousel-caption { font-size: 12px; }
+
+  .quote-align.less { left: 0; }
 }
+
