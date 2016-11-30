@@ -1,3 +1,20 @@
+function setAffix(element, width) {
+    $(element).removeData("bs.affix").removeClass("affix affix-top affix-bottom");
+    if (width < 768) {
+        $(element).affix({ offset: 205 }).on("affixed-top.bs.affix", function() { $postAffix.removeAttr('style'); });
+        $(element).on("affixed.bs.affix", function() { $postAffix.css('margin-top', '52px'); });
+    } else if (width > 991) {
+        $(element).affix({ offset: 464 }).on("affixed-top.bs.affix", function() { $postAffix.removeAttr('style'); });
+        $(element).on("affixed.bs.affix", function() { $postAffix.css('margin-top', '62px'); });
+    } else if (width > 767 && width < 850) {
+        $(element).affix({ offset: 277 }).on("affixed-top.bs.affix", function() { $postAffix.removeAttr('style'); });
+        $(element).on("affixed.bs.affix", function() { $postAffix.css('margin-top', '56px'); });
+    } else {
+        $(element).affix({ offset: 286 }).on("affixed-top.bs.affix", function() { $postAffix.removeAttr('style'); });
+        $(element).on("affixed.bs.affix", function() { $postAffix.css('margin-top', '62px'); });
+    }
+};
+
 $(document).ready(function() {
     var newData, $this, $imgOrder, $radioObject = $("[type='radio']"),
         $bookBtn = $(".book-now"),
