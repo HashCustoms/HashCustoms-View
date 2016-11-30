@@ -138,15 +138,14 @@ body {
 
 .off-white-bg { background-color: #eee; }
 
+.gallery .glyphicon-menu-down { top: 3px; }
+
 .affix {
   top: 23px;
   z-index: 10;
 }
 
-.affix.gallery {
-  top: 19px;
-  height: 66px;
-}
+.affix.gallery { height: 62px; }
 
 .quote-align {
   position: relative;
@@ -431,13 +430,15 @@ body {
 
 .m-top9rem { margin-top: 9rem; }
 
+.m-top11rem { margin-top: 5rem; }
+
 .m-top-neg-28rem { margin-top: -28.1rem; }
 
 .h-fit { height: 28.1rem; }
 
 .m-bot6rem { margin-bottom: 6rem; }
 
-.m-left20px { margin-left: 14px; }
+.m-left20px { margin-left: 12px; }
 
 .rel-top-neg5rem {
   position: relative;
@@ -533,10 +534,7 @@ body {
 
 .parallax-window.less { min-height: 30rem; }
 
-.jumbo {
-  width: 100%;
-  font-size: 11rem;
-}
+.jumbo { width: 100%; }
 
 .social-icons {
   display: inline-block;
@@ -669,7 +667,6 @@ body {
 }
 
 .full-view-content {
-  max-width: 70%;
   padding: 20px;
   margin: auto;
 }
@@ -691,6 +688,18 @@ body {
   .text-left-sm { text-align: left; }
 
   .text-right-sm { text-align: right; }
+
+  .gallery h1 { font-size: 21px; }
+
+  .m-top11rem { margin-top: 6rem; }
+
+  .jumbo { font-size: 6rem; }
+
+  .full-view-content { max-width: 83%; }
+}
+
+@media only screen and (min-width: 850px) {
+  .gallery h1 { font-size: 28px; }
 }
 
 @media only screen and (min-width: 992px) {
@@ -699,14 +708,40 @@ body {
   .quote-align.less { left: 40%; }
 
   .quote-align h1 { font-size: 28px; }
+
+  .m-top11rem { margin-top: 11rem; }
+
+  .jumbo { font-size: 11rem; }
+
+  .full-view-content { max-width: 70%; }
+}
+
+@media only screen and (max-width: 1130px) and (min-width: 768px) {
+  .affix .text-center {
+    margin-left: 11%;
+    text-align: left;
+  }
 }
 
 @media only screen and (max-width: 991px) {
   .parallax-window { min-height: 27rem; }
+
+  .img36 { margin-top: -83.5%; }
+}
+
+@media only screen and (max-width: 849px) and (min-width: 768px) {
+  .gallery h1 {
+    position: relative;
+    top: -4px;
+  }
+
+  .affix.gallery h1 { top: 4px; }
 }
 
 @media only screen and (max-width: 767px) {
   .no-pad-xs { padding: 0; }
+
+  .strip-shade h1 { margin-left: 20%; }
 
   .carousel-indicators.custom { bottom: 0; }
 
@@ -734,6 +769,18 @@ body {
     height: 57px;
   }
 
+  .affix.gallery { height: 56px; }
+
+  .gallery h1 { font-size: 28px; }
+
+  .jumbo { font-size: 5rem; }
+
+  .jumbo + h3 { margin-top: 10px; }
+
+  .img35 { margin-top: -84%; }
+
+  .img36 { margin-top: auto; }
+
   .parallax-window { min-height: 20rem; }
 
   .quote-align h1 { font-size: 18px; }
@@ -756,3 +803,14 @@ body {
   .quote-align.less { left: 0; }
 }
 
+@media only screen and (max-width: 499px) {
+  .pad-left1px { padding-left: 1px; }
+
+  .gallery h1 {
+    position: relative;
+    top: -5px;
+    font-size: 20px;
+  }
+
+  .affix.gallery h1 { top: 5px; }
+}

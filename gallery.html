@@ -22,7 +22,7 @@
       <div class="row">
         <div class="col-xs-12 transparent-bg">
           <div class="row">
-            <div class="col-xs-3 col-sm-2 col-md-1">
+            <div class="col-xs-3 col-sm-2 col-md-1 pad-left1px">
               <img class="img-responsive logo-pos" src="images/logo.png">
             </div>
             <button class="navbar-toggle pull-right visible-xs" data-toggle="collapse" data-target="#myNavbar">
@@ -55,15 +55,15 @@
 <!--  Main Div Started  -->
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12 m-top36px parallax-window" data-parallax="scroll" data-image-src="images/gallery-parallax.jpg">
-        <h1 class="text-uppercase text-center text-white jumbo">Gallery</h1>
-        <h3 class="text-uppercase text-center text-white">For Detailed Pictures</h3>
+      <div class="col-xs-12 text-uppercase text-center text-white m-top36px flex-center column parallax-window" data-parallax="scroll" data-image-src="images/gallery-parallax.jpg">
+        <h1 class="jumbo m-top11rem">Gallery</h1>
+        <h3>For Detailed Pictures</h3>
       </div>
     </div>
-    <div class="row no-overflow-x">
-      <div class="col-xs-12 no-padding off-white-bg gallery" data-spy="affix" data-offset-top="474">
+    <div class="row">
+      <div class="col-xs-12 off-white-bg gallery" id="affix-element" data-spy="affix">
         <div class="row">
-          <div class="col-xs-10 col-xs-offset-1 text-center">
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
             <h1 class="text-uppercase">
               <span class="light">Project</span>
               <span>Morse Code</span>
@@ -74,7 +74,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12">
+      <div class="col-xs-12" id="post-affix-element">
         <div class="row">
           <div class="col-xs-6 col-sm-4 col-md-3 no-padding">
             <img class="img-responsive gallery-img" data-order="0" src="images/g41.jpg">
@@ -191,13 +191,10 @@
             <img class="img-responsive gallery-img" data-order="37" src="images/g34.jpg">
           </div>
           <div class="col-xs-6 col-sm-4 col-md-3 no-padding">
-            <img class="img-responsive gallery-img" data-order="38" src="images/g35.jpg">
+            <img class="img-responsive gallery-img img35" data-order="38" src="images/g35.jpg">
           </div>
           <div class="col-xs-6 col-sm-4 col-md-3 no-padding">
-            <img class="img-responsive gallery-img" data-order="39" src="images/g36.jpg">
-          </div>
-          <div class="col-xs-6 col-sm-4 col-md-3 no-padding m-top-neg-28rem">
-            <img class="img-responsive gallery-img h-fit" data-order="40" src="images/g1.jpg">
+            <img class="img-responsive gallery-img img36" data-order="39" src="images/g36.jpg">
           </div>
         </div>
       </div>
@@ -249,7 +246,6 @@
                 <li data-target="#gallery-carousel" data-slide-to="37"></li>
                 <li data-target="#gallery-carousel" data-slide-to="38"></li>
                 <li data-target="#gallery-carousel" data-slide-to="39"></li>
-                <li data-target="#gallery-carousel" data-slide-to="40"></li>
               </ol>
               <div class="carousel-inner">
                 <div class="item active">
@@ -372,9 +368,6 @@
                 <div class="item">
                  <img class="img-responsive" src="images/g36.jpg">
                 </div>
-                <div class="item">
-                 <img class="img-responsive" src="images/g1.jpg">
-                </div>
               </div>
               <a class="left carousel-control" data-slide="prev" href="#gallery-carousel">
                 <span class="icon-prev less"></span>
@@ -442,5 +435,19 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="js/parallax.min.js"></script>
   <script src="js/fx-script.js"></script>
+  <script>
+    var $documentObject = $(document),
+        $windowObject = $(window),
+        $affixElement = $("#affix-element"),
+        $postAffix = $("#post-affix-element");
+    $documentObject.ready(function() {
+      width = $windowObject.outerWidth();
+      setAffix($affixElement, width);
+      $windowObject.resize(function() {
+        width = $windowObject.outerWidth();
+        setAffix($affixElement, width);
+      });
+    });
+  </script>
 </body>
 </html>
