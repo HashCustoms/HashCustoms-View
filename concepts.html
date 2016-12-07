@@ -12,7 +12,7 @@
 </head>
 <body>
 <!--  Navbar Started  -->
-  <nav class="navbar navbar-fixed-top">
+  <nav class="navbar navbar-fixed-top" id="navb">
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12 strip-shade top no-pad-xs">
@@ -54,12 +54,12 @@
 <!--  Navbar Ended  -->
 <!--  Main Div Started  -->
   <div class="container-fluid">
-    <div class="row no-overflow-x">
+    <div class="row">
       <div class="col-xs-10 col-xs-offset-1 text-center m-top9rem">
         <h4 class="text-uppercase text-grey">Open Projects</h4>
         <span class="pos-top-neg8px">The prototype you can own right now</span>
       </div>
-      <div class="col-xs-12 no-padding off-white-bg" data-spy="affix" data-offset-top="120">
+      <div class="col-xs-12 off-white-bg" id="affix-element" data-spy="affix">
         <div class="row">
           <div class="col-xs-10 col-xs-offset-1 text-center">
             <h2 class="text-uppercase">
@@ -71,7 +71,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12 m-bot6rem parallax-window" data-parallax="scroll" data-image-src="images/concepts-parallax1.jpg">
+      <div class="col-xs-12 parallax-window" id="post-affix-element" data-parallax="scroll" data-image-src="images/concepts-parallax1.jpg">
         <button class="btn book-now text-uppercase" data-toggle="modal" data-target="#bookPopup" type="button">
           <span class="light">Own a Prototype</span><br>
           <span class="semi-bold">Book Now</span>
@@ -287,9 +287,9 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12 flex-center parallax-window less rel-top-neg5rem" data-parallax="scroll" data-image-src="images/concepts-parallax2.jpg">
+      <div class="col-xs-12 flex-center parallax-window less" data-parallax="scroll" data-image-src="images/concepts-parallax2.jpg">
         <div class="row">
-          <div class="col-xs-12 quote-align less rel-top5rem">
+          <div class="col-xs-12 quote-align less">
             <h1 class="text-uppercase text-white">
               <dfn>" A Man is Known<br>
               <span class="m-left20px">by the Design</span><br>
@@ -382,8 +382,8 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12 flex-center parallax-window rel-top-neg5rem" data-parallax="scroll" data-image-src="images/highlights-r1.jpg">
-        <h1 class="text-uppercase text-center text-white jumbo rel-top5rem">Coming Soon</h1>
+      <div class="col-xs-12 flex-center parallax-window" data-parallax="scroll" data-image-src="images/highlights-r1.jpg">
+        <h1 class="text-uppercase text-center text-white jumbo">Coming Soon</h1>
       </div>
     </div>
   </div>
@@ -442,9 +442,20 @@
   <script src="js/jquery.formatter.min.js"></script>
   <script src="js/fx-script.js"></script>
   <script>
-    var $contactInput = $("#contact");
-    $contactInput.formatter({ 'pattern': '+91 {{9999999999}}' });
-    $.validate();
+    $document.ready(function() {
+      var $contactInput = $("#contact"),
+          $vehicleNum = $("#vehicle-num");
+      $contactInput.formatter({
+        'pattern': '+91 {{9999999999}}',
+        'persistent': true
+      });
+      $vehicleNum.formatter({ 'pattern': '{{aa99}} {{aa}} {{9999}}' });
+      $.validate();
+      $windowObject.resize(function() {
+        width = $windowObject.outerWidth();
+        setAffix(width);
+      });
+    });
   </script>
 </body>
 </html>
