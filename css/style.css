@@ -728,6 +728,8 @@ body {
 
   .quote-align.less { left: 40%; }
 
+  .quote-align.less.concepts { left: 50%; }
+
   .quote-align h1 { font-size: 28px; }
 
   .m-top11rem { margin-top: 11rem; }
