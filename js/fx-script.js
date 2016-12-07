@@ -1,22 +1,26 @@
-function setAffix(element, width) {
-    $(element).removeData("bs.affix").removeClass("affix affix-top affix-bottom");
+var $document = $(document),
+    $windowObject = $(window),
+    $affixElement = $("#affix-element"),
+    $postAffix = $("#post-affix-element");
+function setAffix(width) {
+    $windowObject.off(".affix");
+    $affixElement.removeData("bs.affix").removeClass("affix affix-top affix-bottom");
     if (width < 768) {
-        $(element).affix({ offset: 205 }).on("affixed-top.bs.affix", function() { $postAffix.removeAttr('style'); });
-        $(element).on("affixed.bs.affix", function() { $postAffix.css('margin-top', '52px'); });
-    } else if (width > 991) {
-        $(element).affix({ offset: 464 }).on("affixed-top.bs.affix", function() { $postAffix.removeAttr('style'); });
-        $(element).on("affixed.bs.affix", function() { $postAffix.css('margin-top', '62px'); });
-    } else if (width > 767 && width < 850) {
-        $(element).affix({ offset: 277 }).on("affixed-top.bs.affix", function() { $postAffix.removeAttr('style'); });
-        $(element).on("affixed.bs.affix", function() { $postAffix.css('margin-top', '56px'); });
-    } else {
-        $(element).affix({ offset: 286 }).on("affixed-top.bs.affix", function() { $postAffix.removeAttr('style'); });
-        $(element).on("affixed.bs.affix", function() { $postAffix.css('margin-top', '62px'); });
+        $affixElement.affix({ offset: 305 });
     }
+    else if (width > 991) {
+        $affixElement.affix({ offset: 545 });
+    }
+    else {
+        $affixElement.affix({ offset: 367 });
+    }
+    $affixElement.on("affixed.bs.affix", function() { $postAffix.css('margin-top', '60px'); }).on("affixed-top.bs.affix", function() { $postAffix.removeAttr('style'); });
 };
 
-$(document).ready(function() {
-    var newData, $this, $imgOrder, $radioObject = $("[type='radio']"),
+$document.ready(function() {
+    var newData, $this, $thisDoc, $imgOrder, lastScrollTop = $document.scrollTop(),
+        $navbar = $("#navb"),
+        $radioObject = $("[type='radio']"),
         $bookBtn = $(".book-now"),
         $galleryImgObject = $(".gallery-img"),
         $carousel = $("#gallery-carousel"),
@@ -27,6 +31,10 @@ $(document).ready(function() {
     $radioObject.prop('disabled', true);
     $parllaxObject.parallax({ speed: 0.3 });
     $carousel.carousel('pause');
+        if ($affixElement.length) {
+            width = $windowObject.outerWidth();
+            setAffix(width);
+        }
     $bookBtn.on('click', function() {
         $.ajax({
             type: "GET",
@@ -59,5 +67,11 @@ $(document).ready(function() {
             $imgViewOverlay.removeClass("view");
             setTimeout(function() { $imgViewOverlay.addClass("hide"); }, 200);
         }
+    });
+    $document.scroll(function() {
+        $thisDoc = $document.scrollTop();
+        $thisDoc > lastScrollTop ? $navbar.add($affixElement).addClass("up") : $navbar.add($affixElement).removeClass("up");
+        lastScrollTop = $thisDoc;
+        $thisDoc != 0 ? $navbar.addClass("partial") : $navbar.removeClass("partial");
     });
 });

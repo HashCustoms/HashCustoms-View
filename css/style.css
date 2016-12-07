@@ -124,8 +124,6 @@ body {
 
 .no-padding { padding: 0; }
 
-.no-overflow-x { overflow-x: hidden; }
-
 .no-mtop { margin-top: -2rem !important; }
 
 .no-mbot { margin-bottom: 0; }
@@ -141,11 +139,19 @@ body {
 .gallery .glyphicon-menu-down { top: 3px; }
 
 .affix {
-  top: 23px;
+  top: 0;
   z-index: 10;
+  transition: top 300ms;
 }
 
-.affix.gallery { height: 62px; }
+.affix.up { top: -60px; }
+
+.affix.gallery { height: 56px; }
+
+.affix.gallery h1 {
+  margin-top: 10px;
+  transition: margin-top 300ms;
+}
 
 .quote-align {
   position: relative;
@@ -168,12 +174,24 @@ body {
 
 .bg-grey { background-color: #474747; }
 
+#navb {
+  top: 0;
+  transition: top 400ms;
+}
+
+#navb.up { top: -60px; }
+
 .strip-shade {
   height: 32px;
   background: url(../images/hatch-bg.png);
 }
 
-.strip-shade.top { height: 36px; }
+.strip-shade.top {
+  height: 36px;
+  transition: margin-top 400ms;
+}
+
+#navb.partial .strip-shade.top { margin-top: -30px; }
 
 .strip-shade h1 {
   display: inline-block;
@@ -192,9 +210,16 @@ body {
 .icon-bar { background-color: #000; }
 
 .logo-pos {
+  position: relative;
+  top: 0;
   max-width: 67px;
-  margin-top: -20px;
+  margin-top: -24px;
+  transition: top 400ms;
 }
+
+#navb.partial .logo-pos { top: 30px; }
+
+#navb.up .logo-pos { top: 0; }
 
 .navbar-toggle { padding: 4px 0; }
 
@@ -342,7 +367,7 @@ body {
 .highlights-box .img-responsive { border-radius: 3px; }
 
 .highlights-box.left {
-  padding: 10px 0;
+  padding: 15px 0;
   margin-right: 4px;
 }
 
@@ -405,9 +430,7 @@ body {
   border-radius: 3px;
 }
 
-.perseverance .pad-top {
-  padding-top: 40px;
-}
+.perseverance .pad-top { padding-top: calc(4% - 1px); }
 
 .perseverance .extra-left { margin-left: 6px; }
 
@@ -586,20 +609,18 @@ body {
   align-items: center;
   color: #fff;
   background-color: rgba(0,0,0,.7);
-  border-radius: 2px;
+  border-radius: 3px;
   cursor: pointer;
   opacity: 1;
   transition: opacity 500ms ease;
 }
 
 .img-overlay.first {
-  top: 42px;
+  top: calc(16% - 2px);
   right: 3px;
-  bottom: 3px;
+  bottom: 2px;
   left: -2px;
 }
-
-.img-overlay.second { top: 5px; }
 
 .img-overlay.middle {
   right: 2px;
@@ -764,12 +785,9 @@ body {
 
   .radicality-bg p span { font-size: 14px; }
 
-  .affix {
-    top: 20px;
-    height: 57px;
-  }
+  .img-overlay.first { top: calc(16% - 0px); }
 
-  .affix.gallery { height: 56px; }
+  .affix { height: 57px; }
 
   .gallery h1 { font-size: 28px; }
 
@@ -786,6 +804,8 @@ body {
   .quote-align h1 { font-size: 18px; }
 
   .img-overlay p { font-size: 14px; }
+
+  .affix.gallery { height: 46px; }
 }
 
 @media only screen and (max-width: 600px) {

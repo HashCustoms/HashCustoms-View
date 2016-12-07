@@ -12,7 +12,7 @@
 </head>
 <body>
 <!--  Navbar Started  -->
-  <nav class="navbar navbar-fixed-top">
+  <nav class="navbar navbar-fixed-top" id="navb">
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12 strip-shade top no-pad-xs">
@@ -436,16 +436,10 @@
   <script src="js/parallax.min.js"></script>
   <script src="js/fx-script.js"></script>
   <script>
-    var $documentObject = $(document),
-        $windowObject = $(window),
-        $affixElement = $("#affix-element"),
-        $postAffix = $("#post-affix-element");
-    $documentObject.ready(function() {
-      width = $windowObject.outerWidth();
-      setAffix($affixElement, width);
+    $document.ready(function() {
       $windowObject.resize(function() {
         width = $windowObject.outerWidth();
-        setAffix($affixElement, width);
+        setAffix(width);
       });
     });
   </script>
