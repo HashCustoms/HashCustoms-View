@@ -2,24 +2,16 @@ var $document = $(document),
     $windowObject = $(window),
     $affixElement = $("#affix-element"),
     $postAffix = $("#post-affix-element");
+
 function setAffix(width) {
     $windowObject.off(".affix");
     $affixElement.removeData("bs.affix").removeClass("affix affix-top affix-bottom");
-    if (width < 768) {
-        $affixElement.affix({ offset: 305 });
-    }
-    else if (width > 991) {
-        $affixElement.affix({ offset: 545 });
-    }
-    else {
-        $affixElement.affix({ offset: 367 });
-    }
-    $affixElement.on("affixed.bs.affix", function() { $postAffix.css('margin-top', '60px'); }).on("affixed-top.bs.affix", function() { $postAffix.removeAttr('style'); });
+    width > 991 ? $affixElement.affix({ offset: 488 }) : width < 768 ? $affixElement.affix({ offset: 247 }) : $affixElement.affix({ offset: 305 });
+    $affixElement.on("affixed.bs.affix", function() { $postAffix.css('margin-top', '58px'); }).on("affixed-top.bs.affix", function() { $postAffix.removeAttr('style'); });
 };
 
 $document.ready(function() {
-    var newData, $this, $thisDoc, $imgOrder, lastScrollTop = $document.scrollTop(),
-        $navbar = $("#navb"),
+    var newData, $this, $imgOrder, $navbar = $("#navb"),
         $radioObject = $("[type='radio']"),
         $bookBtn = $(".book-now"),
         $galleryImgObject = $(".gallery-img"),
@@ -31,10 +23,7 @@ $document.ready(function() {
     $radioObject.prop('disabled', true);
     $parllaxObject.parallax({ speed: 0.3 });
     $carousel.carousel('pause');
-        if ($affixElement.length) {
-            width = $windowObject.outerWidth();
-            setAffix(width);
-        }
+        $affixElement.length ? (width = $windowObject.outerWidth(), setAffix(width)):0;
     $bookBtn.on('click', function() {
         $.ajax({
             type: "GET",
@@ -62,16 +51,6 @@ $document.ready(function() {
         $imgViewOverlay.removeClass("view");
         setTimeout(function() { $imgViewOverlay.addClass("hide"); }, 200);
     });
-    $body.on('keydown', function(evt) {
-        if (evt.keyCode == 27) {
-            $imgViewOverlay.removeClass("view");
-            setTimeout(function() { $imgViewOverlay.addClass("hide"); }, 200);
-        }
-    });
-    $document.scroll(function() {
-        $thisDoc = $document.scrollTop();
-        $thisDoc > lastScrollTop ? $navbar.add($affixElement).addClass("up") : $navbar.add($affixElement).removeClass("up");
-        lastScrollTop = $thisDoc;
-        $thisDoc != 0 ? $navbar.addClass("partial") : $navbar.removeClass("partial");
-    });
+    $body.on('keydown', function(evt) { evt.keyCode == 27 ? ($imgViewOverlay.removeClass("view"), setTimeout(function() { $imgViewOverlay.addClass("hide"); }, 200)):0; });
+    $document.scroll(function() { $document.scrollTop() != 0 ? $navbar.addClass("partial") : $navbar.removeClass("partial"); });
 });
