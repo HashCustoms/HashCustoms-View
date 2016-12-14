@@ -27,7 +27,7 @@ $document.ready(function() {
     $bookBtn.on('click', function() {
         $.ajax({
             type: "GET",
-            url: "api.hashcustoms.com/availability",
+            url: "//api.hashcustoms.com/availability",
             dataType: 'json',
             success: function(data) {
                 var id;
