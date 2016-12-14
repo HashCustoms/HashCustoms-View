@@ -27,7 +27,7 @@ $document.ready(function() {
     $bookBtn.on('click', function() {
         $.ajax({
             type: "GET",
-            url: "dataList.json",
+            url: "api.hashcustoms.com/availability",
             dataType: 'json',
             success: function(data) {
                 var id;
@@ -36,6 +36,11 @@ $document.ready(function() {
                     id = "#num" + value;
                     $(id).prop('disabled', false);
                 });
+            },
+            error: function(xhr, textStatus, errorThrown) {
+                console.log("Response: " + xhr.responseText);
+                console.log("Text Status: " + textStatus);
+                console.log("Error Thrown: " + errorThrown);
             }
         });
     });
