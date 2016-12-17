@@ -118,6 +118,8 @@ body {
   align-items: center;
 }
 
+.full-h { height: 100%; }
+
 .flex-center.column { flex-direction: column; }
 
 .semi-bold { font-weight: 500; }
@@ -130,11 +132,21 @@ body {
 
 .text-black { color: #000; }
 
+.text-white { color: #fff; }
+
 .text-grey { color: #333 !important; }
 
 .text-light-grey { color: #888; }
 
+.bg-black { background-color: #000; }
+
+.bg-grey { background-color: #474747; }
+
 .off-white-bg { background-color: #eee; }
+
+.pay-success { background-color: #449d44; }
+
+.pay-fail { background-color: #c9302c; }
 
 .gallery .glyphicon-menu-down { top: 3px; }
 
@@ -164,12 +176,6 @@ body {
 .quote-align h1 { font-size: 24px; }
 
 .quote-align.less { left: 10%; }
-
-.text-white { color: #fff; }
-
-.bg-black { background-color: #000; }
-
-.bg-grey { background-color: #474747; }
 
 .strip-shade {
   height: 32px;
