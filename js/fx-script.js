@@ -31,7 +31,7 @@ $document.ready(function() {
             dataType: 'json',
             success: function(data) {
                 var id;
-                newData = data.available;
+                newData = data.available || data.availabe;
                 $(newData).each(function(i, value) {
                     id = "#num" + value;
                     $(id).prop('disabled', false);
