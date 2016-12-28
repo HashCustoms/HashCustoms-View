@@ -812,6 +812,9 @@ body {
   .affix { height: 46px; }
 
   .affix.gallery h1 { margin-top: 10px; }
+
+  .pay-success .m-top9rem,
+  .pay-fail .m-top9rem { margin-top: 5rem; }
 }
 
 @media only screen and (max-width: 600px) {
