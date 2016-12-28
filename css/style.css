@@ -428,6 +428,14 @@ body {
 
 .perseverance .extra-left { margin-left: 6px; }
 
+.perseverance .column-first { padding-left: 1px; }
+
+.perseverance .column-last { padding-right: 5px; }
+
+.perseverance .column-first .img-overlay { left: 3px; }
+
+.perseverance .column-last .img-overlay { right: 3px; }
+
 .p-bottom7rem { padding-bottom: 7rem; }
 
 .p-bottom20rem { padding-bottom: 20rem; }
@@ -797,6 +805,8 @@ body {
 
   .quote-align h1 { font-size: 18px; }
 
+  .highlights-box.right .carousel-caption { right: auto; }
+
   .img-overlay p { font-size: 14px; }
 
   .affix { height: 46px; }
@@ -829,4 +839,8 @@ body {
   }
 
   .affix.gallery h1 { top: 5px; }
+}
+
+@media only screen and (max-width: 415px) {
+  .strip-shade h1 { margin-left: 26%; }
 }

@@ -146,12 +146,12 @@
                           <span class="text-grey">(Can be your favourite or lucky number)</span>
                         </div>
                         <div class="col-xs-8">
-                          <p class="text-grey">Pick your favourite number</p>
+                          <p class="text-grey" id="prototype-error-dialog">Pick your favourite number</p>
                           <div class="row">
                             <div class="col-xs-11">
                               <div class="row">
                                 <div class="col-xs-3 col-sm-2 col-md-1">
-                                  <input id="num1" name="prototype" type="radio" value="1">
+                                  <input id="num1" name="prototype" data-validation="required checkbox_group" data-validation-qty="max1" data-validation-error-msg-container="#prototype-error-dialog" data-validation-error-msg-required="Please select your design Prototype number." type="radio" value="1">
                                   <label for="num1">1</label>
                                 </div>
                                 <div class="col-xs-3 col-sm-2 col-md-1">
@@ -415,7 +415,7 @@
                   </div>
                   <div class="col-xs-12 no-padding">
                     <div class="row">
-                      <div class="col-xs-4 no-padding">
+                      <div class="col-xs-4 no-padding column-first">
                         <img class="img-responsive" src="images/expertise3.jpg">
                         <div class="img-overlay">
                           <p>Sensible<br>Design</p>
@@ -427,7 +427,7 @@
                           <p>Minimalistic<br>Approach</p>
                         </div>
                       </div>
-                      <div class="col-xs-4 no-padding">
+                      <div class="col-xs-4 no-padding column-last">
                         <img class="img-responsive" src="images/expertise5.jpg">
                         <div class="img-overlay">
                           <p>Precision upto<br>10 microns</p>
