@@ -323,6 +323,8 @@ body {
   outline: none;
 }
 
+#exclusive-msg { display: none; }
+
 .radio-bot { margin: 1.4rem 15px; }
 
 .custom-underline {

@@ -13,6 +13,7 @@ function setAffix(width) {
 $document.ready(function() {
     var newData, $this, $imgOrder, $navbar = $("#navb"),
         $radioObject = $("[type='radio']"),
+        $exclusivePTag = $("#exclusive-msg"),
         $bookBtn = $(".book-now"),
         $galleryImgObject = $(".gallery-img"),
         $carousel = $("#gallery-carousel"),
@@ -20,10 +21,10 @@ $document.ready(function() {
         $closePreview = $(".full-view-close"),
         $parllaxObject = $(".parallax-window"),
         $body = $carousel.parents("body");
-    $radioObject.prop('disabled', true);
+    $radioObject.prop('disabled', true).on('click', function() { $exclusivePTag.slideDown("slow"); });
     $parllaxObject.parallax({ speed: 0.3 });
     $carousel.carousel('pause');
-        $affixElement.length ? (width = $windowObject.outerWidth(), setAffix(width)):0;
+    $affixElement.length ? (width = $windowObject.outerWidth(), setAffix(width)) : 0;
     $bookBtn.on('click', function() {
         $.ajax({
             type: "GET",
